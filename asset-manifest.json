@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.0c214430.css",
-    "main.js": "/static/js/main.e083c198.js",
+    "main.js": "/static/js/main.be909a2b.js",
     "static/media/cardbg.png": "/static/media/cardbg.acdf90861d4cd0a7b0a3.png",
     "static/media/Coolvetica.woff": "/static/media/Coolvetica.ff65b29c854d6cfce350.woff",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
     "main.0c214430.css.map": "/static/css/main.0c214430.css.map",
-    "main.e083c198.js.map": "/static/js/main.e083c198.js.map"
+    "main.be909a2b.js.map": "/static/js/main.be909a2b.js.map"
   },
   "entrypoints": [
     "static/css/main.0c214430.css",
-    "static/js/main.e083c198.js"
+    "static/js/main.be909a2b.js"
   ]
 }
