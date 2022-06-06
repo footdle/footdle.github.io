@@ -1,0 +1,75 @@
+table {
+    margin-top: 3vh;
+    width: 70%;
+    max-width: 700px;
+    font-size: min(3vh, 3vw);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgb(235, 217, 120);
+}
+
+.theader {
+    background-color: #ECB365;
+    /* font-weight: bolder; */
+    text-shadow: rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;
+}
+
+.trows{
+    text-align: center;
+    text-transform: capitalize; 
+    background-color: #064663;
+}
+
+.goodGuess {
+    background-color: #067427;
+}
+
+.badGuess {
+    background-color: #c01212;
+}
+
+.gencell{
+    text-align: center;
+    padding:1vh 0 1vh 0 ;
+}
+
+table tr:first-child td:first-child {
+    border-top-left-radius: 10px;
+}
+
+table tr:first-child td:last-child {
+    border-top-right-radius: 10px;
+}
+
+table tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+.leftSideIconPic{
+    height:5vh;
+    width:5vh;
+}
+
+tbody {
+    display:block;
+    max-height:30vh;
+    overflow:auto;
+}
+
+.flagIMG {
+
+    width: 3vw;
+    height:auto;
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+
+}
