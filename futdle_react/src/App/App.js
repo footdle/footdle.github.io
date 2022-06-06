@@ -4,6 +4,7 @@ import players from '../answers_temp.json';
 import other_players from '../players_temp.json';
 import SearchBar from '../SearchBar/SearchBar';
 import CurrentPlayerViewer from '../CurrentPlayerView/CurrentPlayerViewer';
+import HigherLowerRenderer from '../HigherLowerRenderer/HigherLowerRenderer';
 import GuessMatrix from '../GuessMatrix/GuessMatrix';
 import { useState, useEffect, useRef} from "react";
 import CardRenderer from '../CardRenderer/CardRenderer';

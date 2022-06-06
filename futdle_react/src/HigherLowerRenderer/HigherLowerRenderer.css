@@ -1,0 +1,41 @@
+.hl_player_img{
+    width: min(30vh, 30vw);
+    height: min(30vh, 30vw);
+}
+
+.hl_player_holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hl_outer_holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.statistic {
+    color:gold;
+}
+
+.thisPlayer {
+    color: white;
+    background-color: darkblue;
+    font-family:'Roboto';
+    border-radius: 20px;
+    border:none;
+    font-size: min(4vh, 4vw);
+    margin:2vh 0 2vh 0;
+    padding:10px;
+}
+
+.higherLowerHolder {
+    /* background-image: url("bg.png");
+    background-size: cover; */
+    background: rgb(2,0,36);
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(127,106,0,1) 0%, rgba(241,205,0,1) 100%);
+    border-radius: 20px;
+    padding:20px;
+    border: solid gold 5px;
+}

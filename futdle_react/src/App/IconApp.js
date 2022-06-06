@@ -1,4 +1,6 @@
 import logo from '../logo.svg';
+import attackers from "../attackers_with_stats.json";
+
 import './App.css';
 import players from '../answers_temp.json';
 import icons from '../icons.json';
@@ -6,6 +8,7 @@ import other_players from '../players_temp.json';
 import SearchBar from '../SearchBar/SearchBar';
 import IconSearchBar from '../IconSearchBar/IconSearchBar';
 import CurrentPlayerViewer from '../CurrentPlayerView/CurrentPlayerViewer';
+import HigherLowerRenderer from '../HigherLowerRenderer/HigherLowerRenderer';
 import IconCurrentPlayerViewer from '../IconCurrentPlayerView/IconCurrentPlayerViewer';
 import GuessMatrix from '../GuessMatrix/GuessMatrix';
 import IconCardGuessMatrix from '../IconCardGuessMatrix/IconCardGuessMatrix';
@@ -95,6 +98,11 @@ function IconApp() {
   const [needsOpponentGrid, setNeedsOpponentGrid] = useState(false)
   const [opponentLatest, setOpponentLatest] = useState([])
   const [currentGameIsIcon, setCurrentGameIsIcon] = useState(false)
+  const [currentGameIsHigherLower, setCurrentGameIsHigherLower] = useState(false)
+  const [leftAttacker, setLeftAttacker] = useState(false)
+  const [rightAttacker, setRightAttacker] = useState(false)
+  const [statistic, setStatistic] = useState(false)
+  const [currentStreak, setCurrentStreak] = useState(0)
 
   const componentRef = useRef({});
   const { current: my } = componentRef;
@@ -393,6 +401,119 @@ function IconApp() {
 
   }
 
+  let showHigherLowerMenu = () =>{
+    
+    MySwal.fire({
+      showCancelButton: true,
+      confirmButtonText:"Play",
+      cancelButtonText: "Play 2",
+      confirmButtonColor:"orange",
+      denyButtonColor:"gray",
+      showDenyButton:false,
+      allowEscapeKey:false,
+      html:  <>
+          <PerfectScrollbar>
+          <div style={{fontSize:'small', height:'50vh', fontWeight:50}}>
+      <p> <a href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQiA95aRBhCsARIsAC2xvfxJfXIVIYbjYglyykGKYkjFsfetU7UqG44ysm5Yh4L2baQZZ77Sc1kaAk6oEALw_wcB&gclsrc=aw.ds" > Kindly consider donating to Ukrainians in need </a></p>
+        <p>Note: Scroll if entire tutorial is not visible :)</p>
+        <p> Higher or lower challenge</p>
+        </div>
+          </PerfectScrollbar>
+      
+      </>,
+      allowOutsideClick: false,
+      
+    }).then((value)=>{
+      setCurrentGameIsHigherLower(true)
+      startHigherLowerGame()
+    })
+}
+
+
+let checkHigherLower = (selectedAttacker, oppositeAttacker, statistic)  => {
+
+
+  if(selectedAttacker[statistic] > oppositeAttacker[statistic]){
+    console.log("TRUE")
+
+    setCurrentStreak(currentStreak + 1)
+
+    startHigherLowerGame()
+
+    toast.dismiss()
+    toast.info(
+      <div style={{fontSize:"small"}}>
+        Correct. {selectedAttacker[statistic]} {statistic} is higher than {oppositeAttacker[statistic]} {statistic}
+      </div>, {
+      position: "bottom-center",
+      autoClose: true,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      closeButton:true,
+      draggable: true,
+      progress: undefined}
+    )
+
+  }else if(selectedAttacker[statistic] == oppositeAttacker[statistic]){
+    setCurrentStreak(currentStreak + 1)
+    
+    toast.dismiss()
+    toast.info(
+      <div style={{fontSize:"small"}}>
+        Correct. Kind of. {selectedAttacker[statistic]} {statistic} is the same as {oppositeAttacker[statistic]} {statistic}
+      </div>, {
+      position: "bottom-center",
+      autoClose: true,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      closeButton:true,
+      draggable: true,
+      progress: undefined}
+    )
+
+    startHigherLowerGame()
+  }else{
+
+    setCurrentStreak(0)
+    toast.dismiss()
+
+    toast.info(
+      <div style={{fontSize:"small"}}>
+        Wrong. {selectedAttacker[statistic]} {statistic} is lower than {oppositeAttacker[statistic]} {statistic}
+      </div>, {
+      position: "bottom-center",
+      autoClose: true,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      closeButton:true,
+      draggable: true,
+      progress: undefined}
+    )
+
+    console.log("FALSE")
+    
+  }
+
+  console.log('checkHigherLower', selectedAttacker[statistic], oppositeAttacker[statistic], statistic)
+}
+
+let startHigherLowerGame = function(){
+
+  let leftI = Math.floor(Math.random() * attackers.length)
+  let rightI = Math.floor(Math.random() * attackers.length)
+
+  let attacking_statistics = ['goals', 'assists', 'mins', 'penalties']
+
+  let statistic = attacking_statistics[Math.floor(Math.random() * attacking_statistics.length)]
+
+  setLeftAttacker(attackers[leftI])
+  setRightAttacker(attackers[rightI])
+  setStatistic(statistic)
+  
+}
 
   let showIconMenu = () =>{
     
@@ -549,7 +670,8 @@ function IconApp() {
       showCancelButton: true,
       showConfirmButton: shouldShowToday,
       confirmButtonText:"Today's Challenge",
-      denyButtonText: "Random Challenge",
+      denyButtonText: "Higher or Lower",
+      // denyButtonText: "Random Challenge",
       denyButtonColor:"gray",
       cancelButtonText:"Icons Mode",
       cancelButtonColor:"orange",
@@ -587,15 +709,33 @@ function IconApp() {
         if(value.isConfirmed){
           random_gen_func = getTodayRandom
           setCurrentGameIsDaily(true)
-        }else if(value.isDenied){
-          random_gen_func = Math.random
-        }
 
-        let l = Math.floor(random_gen_func() * players.length);
+          let l = Math.floor(random_gen_func() * players.length);
         setAnswer(players[l])
 
         console.log(players[l])
+        }else if(value.isDenied){
+          showHigherLowerMenu()
+        }
+
+        
       }
+
+      // if(value.isConfirmed || value.isDenied){
+      //   setCurrentGameIsIcon(false)
+      //   let random_gen_func = null;
+      //   if(value.isConfirmed){
+      //     random_gen_func = getTodayRandom
+      //     setCurrentGameIsDaily(true)
+      //   }else if(value.isDenied){
+      //     random_gen_func = Math.random
+      //   }
+
+      //   let l = Math.floor(random_gen_func() * players.length);
+      //   setAnswer(players[l])
+
+      //   console.log(players[l])
+      // }
 
       if(value.isDismissed){
         showIconMenu()
@@ -803,45 +943,75 @@ function IconApp() {
     <>
       <center><h1>Footdle {currentGameIsIcon ? ' - Icons' : ''}</h1></center>
       
-      <div className='outerHolder'>
-        <div className='cardHolderOuter'>
-        {/* {"HELLO1!!!!"+ currentGameIsIcon} */}
-        {currentGameIsIcon == true ? "": <CardRenderer guess={currentGuess}/>}
+      {
+        currentGameIsHigherLower ?
+        <div style ={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+        Current streak: {currentStreak} <br></br>
 
-        <span>{guesses.length}/{limit} attempts made</span>
-        
-        {currentGameIsIcon == true ? <IconCardGuessMatrix guesses = {guesses} answer={answer} demo={false}/>: <GuessMatrix guesses = {guesses} answer={answer}/>}
 
-        </div>
-        <div className='holder'>
-          {currentGameIsIcon == true ?
-            <IconSearchBar players={icons} selectPlayerFunction={setSelectedPlayer} clearField={clearField} updateClearField={updateClearField} gameActive={gameActive} setSelectedPlayer={setSelectedPlayer}/>
-          :
-            <SearchBar players={other_players} selectPlayerFunction={setSelectedPlayer} clearField={clearField} updateClearField={updateClearField} gameActive={gameActive} setSelectedPlayer={setSelectedPlayer}/>
-          }
-
-          {currentGameIsIcon == true ?
-            <IconCurrentPlayerViewer selectedPlayer = {selectedPlayer} submitPlayer={makeGuess} onclick={undefined} setPlayerMatches={undefined}/>
-          :
-            <CurrentPlayerViewer selectedPlayer = {selectedPlayer} submitPlayer={makeGuess} onclick={undefined} setPlayerMatches={undefined}/>
-          }
-          
-          
-          <ToastContainer 
-            theme="dark" 
-            position="middle-center"
-            autoClose={10000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover={false}
-            style={{ width: "100%" }}
-          />
-        </div>
+        <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower}/>
+        <ToastContainer 
+                      theme="dark" 
+                      position="middle-center"
+                      autoClose={3000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover={false}
+                      style={{ width: "100%" }}
+                    />
       </div>
+      : ''
+      }
+      
+
+      {( () =>{
+          if(currentGameIsHigherLower){
+          }else{
+            return <>
+            <div className='outerHolder'>
+              <div className='cardHolderOuter'>
+                {currentGameIsIcon == true ? "": <CardRenderer guess={currentGuess}/>}
+                <span>{guesses.length}/{limit} attempts made</span>
+                {currentGameIsIcon == true ? <IconCardGuessMatrix guesses = {guesses} answer={answer} demo={false}/>: <GuessMatrix guesses = {guesses} answer={answer}/>}
+              </div>
+              <div className='holder'>
+                {currentGameIsIcon == true ?
+                  <IconSearchBar players={icons} selectPlayerFunction={setSelectedPlayer} clearField={clearField} updateClearField={updateClearField} gameActive={gameActive} setSelectedPlayer={setSelectedPlayer}/>
+                    :
+                      <SearchBar players={other_players} selectPlayerFunction={setSelectedPlayer} clearField={clearField} updateClearField={updateClearField} gameActive={gameActive} setSelectedPlayer={setSelectedPlayer}/>
+                    }
+
+                    {currentGameIsIcon == true ?
+                      <IconCurrentPlayerViewer selectedPlayer = {selectedPlayer} submitPlayer={makeGuess} onclick={undefined} setPlayerMatches={undefined}/>
+                    :
+                      <CurrentPlayerViewer selectedPlayer = {selectedPlayer} submitPlayer={makeGuess} onclick={undefined} setPlayerMatches={undefined}/>
+                    }
+                    <ToastContainer 
+                      theme="dark" 
+                      position="middle-center"
+                      autoClose={10000}
+                      hideProgressBar={false}
+                      newestOnTop={false}
+                      closeOnClick
+                      rtl={false}
+                      pauseOnFocusLoss
+                      draggable
+                      pauseOnHover={false}
+                      style={{ width: "100%" }}
+                    />
+                </div>
+                </div>
+            </>
+          }
+      })()}
+
+      
+
+          
 
       
 
