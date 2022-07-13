@@ -28,6 +28,8 @@ import withReactContent from 'sweetalert2-react-content'
 import PerfectScrollbar from 'react-perfect-scrollbar'
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
+import Random from 'java-random'
+
 import { useAlert } from 'react-alert'
 
 import ReactGA from 'react-ga';
@@ -46,6 +48,11 @@ function IconApp() {
     // Footdle.com  
     ReactGA.initialize('UA-159262483-3');
     ReactGA.pageview(window.location.pathname);
+    
+  }, [])
+
+  useEffect( () => {
+    window.gen_random = -1
   }, [])
 
   const MySwal = withReactContent(Swal)
@@ -104,8 +111,13 @@ function IconApp() {
   const [statistic, setStatistic] = useState(false)
   const [currentStreak, setCurrentStreak] = useState(0)
 
+  const [genFunc, setGenFunc] = useState(-1)
+
+
   const componentRef = useRef({});
   const { current: my } = componentRef;
+
+  var gen_func = -1;
 
   const limit = 12
 
@@ -116,6 +128,7 @@ function IconApp() {
     setSelectedPlayer(undefined)
     setCurrentGuess({"pos":"??","lig":"??","lig_url":"??", "tim":"??","nat":"??", "nam_long":"??", "nam":"??", "img": "https://cdn.sofifa.com/players/230/481/22_60.png", "tim_url":"??"})
     setCurrentGameIsDaily(false)
+    setCurrentGameIsHigherLower(false)
     setCurrentGameIsIcon(false)
     return
     console.log("resetting games")
@@ -174,6 +187,7 @@ function IconApp() {
           
           confirmButtonText:'Share Result',
           cancelButtonText:'Back to Main Menu',
+          cancelButtonColor:"red",
           showConfirmButton: currentGameIsDaily,
           showCancelButton:true,
           allowOutsideClick:false,
@@ -213,6 +227,7 @@ function IconApp() {
           
           confirmButtonText:'Share Result',
           cancelButtonText:'Back to Main Menu',
+          cancelButtonColor:"red",
           showConfirmButton: currentGameIsDaily,
           showCancelButton:true,
           allowOutsideClick:false,
@@ -328,6 +343,7 @@ function IconApp() {
           
           confirmButtonText:'Share Result',
           cancelButtonText:'Back to Main Menu',
+          cancelButtonColor:"Red",
           showCancelButton:true,
           showConfirmButton:currentGameIsDaily,
           allowOutsideClick:false,
@@ -379,12 +395,10 @@ function IconApp() {
       showCancelButton: true,
       confirmButtonText:"Ok!",
       allowEscapeKey:false,
-      title:"Added Icon Mode!",
+      title:"Added Higher/Lower Mode!",
       html:  <>
       <div style={{overflowY:'auto', fontSize:'small',  fontWeight:50}}>
-      <p>Added an Icons Mode!</p>
-
-      
+        <p>Added a Higher/Lower Mode!</p>
         <p>Now you will see a single advertisment. Thanks for the patience</p>
         <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
       </div>
@@ -394,29 +408,73 @@ function IconApp() {
       
     }).then((value)=>{
       showAd()
-
-
       showMenu()
     })
 
   }
 
   let showHigherLowerMenu = () =>{
+
+   let temp_left = {
+      "key": 7,
+      "pos": "ST",
+      "nat": "PT",
+      "lig": "English Premier League",
+      "tim": "Manchester United",
+      "tim_url": "https://cdn.sofifa.net/teams/11/90.png",
+      "nam": "cristiano ronaldo",
+      "nam_long": "c. ronaldo dos santos aveiro",
+      "img": "https://cdn.sofifa.net/players/020/801/22_180.png",
+      "lig_url": "LeagueIcons/epl.png",
+      "goals": 18,
+      "assists": 3,
+      "mins": 2487,
+      "penalties": 3
+  }
+
+  let temp_right = {
+      "key": 0,
+      "pos": "RW",
+      "nat": "AR",
+      "lig": "French Ligue 1",
+      "tim": "Paris Saint-Germain",
+      "tim_url": "https://cdn.sofifa.net/teams/73/90.png",
+      "nam": "l. messi",
+      "nam_long": "lionel messi",
+      "img": "https://cdn.sofifa.net/players/158/023/22_180.png",
+      "lig_url": "LeagueIcons/lu.png",
+      "goals": 6,
+      "assists": 14,
+      "mins": 2153,
+      "penalties": 0
+  }
     
     MySwal.fire({
       showCancelButton: true,
-      confirmButtonText:"Play",
-      cancelButtonText: "Play 2",
-      confirmButtonColor:"orange",
-      denyButtonColor:"gray",
-      showDenyButton:false,
+      confirmButtonText:"Daily Challenge",
+      cancelButtonText: "Back to Main Menu",
+      cancelButtonColor: "darkred",
+      denyButtonText:"Random Challenge",
+      confirmButtonColor:"darkgreen",
+      denyButtonColor:"#484848",
+      showDenyButton:true,
       allowEscapeKey:false,
       html:  <>
           <PerfectScrollbar>
-          <div style={{fontSize:'small', height:'50vh', fontWeight:50}}>
+          <div style={{fontSize:'small', height:'50vh', fontWeight:50, fontSize:'large'}}>
       <p> <a href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQiA95aRBhCsARIsAC2xvfxJfXIVIYbjYglyykGKYkjFsfetU7UqG44ysm5Yh4L2baQZZ77Sc1kaAk6oEALw_wcB&gclsrc=aw.ds" > Kindly consider donating to Ukrainians in need </a></p>
         <p>Note: Scroll if entire tutorial is not visible :)</p>
-        <p> Higher or lower challenge</p>
+        <p> You will be asked which player has obtained the most goals, scored the most penalties, played the most minutes, or assisted the most in league games this season, between two players. You must select which player has the most of the seleted statistic. An example is shown below between Messi and Ronaldo's <strong>league goals</strong> from the 21/22 season : </p>
+        <div>
+          <HigherLowerRenderer leftAttacker={temp_left} rightAttacker={temp_right} statistic={'goals'} lost={true}></HigherLowerRenderer>
+
+        </div>
+        <p>
+          Thus, if you clicked on Ronaldo, then you would be correct. If not, then you will lose. If they are tied then you are awarded a point either way. Your goals ito get the longest possible streak without losing! Good luck :)
+        </p>
+        <p>IMPORTANT: The statistics are drawn from Season 21/22 games played in the Top 5 Leagues. If a player played outside the top 5 leagues, and signed to a top 5 league club in January, the statistics are only counted from January.</p>
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+
         </div>
           </PerfectScrollbar>
       
@@ -424,8 +482,42 @@ function IconApp() {
       allowOutsideClick: false,
       
     }).then((value)=>{
-      setCurrentGameIsHigherLower(true)
-      startHigherLowerGame()
+      let rng = new Random()
+
+      if(value.isDismissed){
+        showMenu()
+      }else if(value.isConfirmed){
+        setCurrentGameIsHigherLower(true)
+
+        let today_seed = dayOfYear() + (new Date().getFullYear())
+        rng.setSeed(today_seed)
+
+        ReactGA.event({
+          category: 'hl_daily',
+          action: 'Started higher/lower daily random game'
+        });
+
+        window.gen_random =rng.doubles()
+        setGameActive(true)
+        startHigherLowerGame()
+        setCurrentGameIsDaily(true)
+      }else if(value.isDenied){
+        setCurrentGameIsHigherLower(true)
+
+        let random_seed = Math.random()*1000000
+        rng.setSeed(random_seed)
+
+        ReactGA.event({
+          category: 'hl_random',
+          action: 'Started higher/lower random game'
+        });
+
+        window.gen_random =rng.doubles()
+        setGameActive(true)
+        startHigherLowerGame()
+      }
+
+      
     })
 }
 
@@ -433,81 +525,67 @@ function IconApp() {
 let checkHigherLower = (selectedAttacker, oppositeAttacker, statistic)  => {
 
 
-  if(selectedAttacker[statistic] > oppositeAttacker[statistic]){
-    console.log("TRUE")
+  if(selectedAttacker[statistic] >= oppositeAttacker[statistic]){
 
     setCurrentStreak(currentStreak + 1)
-
     startHigherLowerGame()
 
-    toast.dismiss()
-    toast.info(
-      <div style={{fontSize:"small"}}>
-        Correct. {selectedAttacker[statistic]} {statistic} is higher than {oppositeAttacker[statistic]} {statistic}
-      </div>, {
-      position: "bottom-center",
-      autoClose: true,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      closeButton:true,
-      draggable: true,
-      progress: undefined}
-    )
-
-  }else if(selectedAttacker[statistic] == oppositeAttacker[statistic]){
-    setCurrentStreak(currentStreak + 1)
-    
-    toast.dismiss()
-    toast.info(
-      <div style={{fontSize:"small"}}>
-        Correct. Kind of. {selectedAttacker[statistic]} {statistic} is the same as {oppositeAttacker[statistic]} {statistic}
-      </div>, {
-      position: "bottom-center",
-      autoClose: true,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      closeButton:true,
-      draggable: true,
-      progress: undefined}
-    )
-
-    startHigherLowerGame()
   }else{
+    setGameActive(false)
+    MySwal.fire({
+      title: <p>You lose!</p>,
+      html: <div style={{    display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'}}>
+          <>
+            Your streak was {currentStreak}
+            <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower} lost={true}/>
+          </>
 
-    setCurrentStreak(0)
-    toast.dismiss()
+        </div>,
+      
+      confirmButtonText:'Share Result',
+      cancelButtonText:'Back to Main Menu',
+      cancelButtonColor:'red',
+      showConfirmButton:currentGameIsDaily,
+      showCancelButton:true,
+      allowOutsideClick:false,
+      allowEscapeKey:false
+    }).then((value) =>{
 
-    toast.info(
-      <div style={{fontSize:"small"}}>
-        Wrong. {selectedAttacker[statistic]} {statistic} is lower than {oppositeAttacker[statistic]} {statistic}
-      </div>, {
-      position: "bottom-center",
-      autoClose: true,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: false,
-      closeButton:true,
-      draggable: true,
-      progress: undefined}
-    )
+      if(value.isConfirmed){
+        let s = highLowShareText(false)
+        copy(s)
+        MySwal.fire({
+          toast:true,
+          timer:3000,
+          text:"Copied result to Clipboard!"      
+        })
 
-    console.log("FALSE")
-    
+      }else if(value.isDismissed){
+
+        // Reset the game
+        resetGame()
+        showMenu()
+        setCurrentStreak(0)
+
+      }
+    })
   }
-
-  console.log('checkHigherLower', selectedAttacker[statistic], oppositeAttacker[statistic], statistic)
 }
 
 let startHigherLowerGame = function(){
+  // console.log('Getting next random numbers')
 
-  let leftI = Math.floor(Math.random() * attackers.length)
-  let rightI = Math.floor(Math.random() * attackers.length)
+  // console.log(window.gen_random)
+  let leftI = Math.floor(window.gen_random.next().value* attackers.length)
+  let rightI = Math.floor(window.gen_random.next().value * attackers.length)
 
-  let attacking_statistics = ['goals', 'assists', 'mins', 'penalties']
+  // console.log(leftI, rightI)
 
-  let statistic = attacking_statistics[Math.floor(Math.random() * attacking_statistics.length)]
+  let attacking_statistics = ['goals', 'assists', 'mins', 'penalties', 'fouls_made', 'fouls_won', 'yellow_cards', 'crosses','offsides', 'interceptions']
+
+  let statistic = attacking_statistics[Math.floor(window.gen_random.next().value * attacking_statistics.length)]
 
   setLeftAttacker(attackers[leftI])
   setRightAttacker(attackers[rightI])
@@ -567,14 +645,16 @@ let startHigherLowerGame = function(){
     MySwal.fire({
       showCancelButton: true,
       confirmButtonText:"Today's Icon Challenge",
-      cancelButtonText: "Random Icon Challenge",
-      confirmButtonColor:"orange",
-      denyButtonColor:"gray",
-      showDenyButton:false,
+      denyButtonText: "Random Icon Challenge",
+      denyButtonColor:'#484848',
+      confirmButtonColor:"#343f81",
+      showDenyButton:true,
+      cancelButtonText:"Back to Main Menu",
+      cancelButtonColor:'darkred',
       allowEscapeKey:false,
       html:  <>
           <PerfectScrollbar>
-          <div style={{fontSize:'small', height:'50vh', fontWeight:50}}>
+          <div style={{fontSize:'small', height:'50vh', fontWeight:50,  fontSize:'large'}}>
       <p> <a href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQiA95aRBhCsARIsAC2xvfxJfXIVIYbjYglyykGKYkjFsfetU7UqG44ysm5Yh4L2baQZZ77Sc1kaAk6oEALw_wcB&gclsrc=aw.ds" > Kindly consider donating to Ukrainians in need </a></p>
         <p>Note: Scroll if entire tutorial is not visible :)</p>
         <p>A random player has been chosen from Prime Icon Moments from Fifa 22. The aim is to guess which player it is within {limit} attempts, by using players themselves as guesses.</p>
@@ -597,30 +677,75 @@ let startHigherLowerGame = function(){
       allowOutsideClick: false,
       
     }).then((value)=>{
-      if(value.isConfirmed || value.isDismissed){
+      if(value.isConfirmed || value.isDenied){
         setCurrentGameIsIcon(true)
         let random_gen_func = null;
         if(value.isConfirmed){
           setCurrentGameIsDaily(true)
           random_gen_func = getTodayRandom
-          setCurrentGameIsDaily(true)
-        }else if(value.isDismissed){
+
+          ReactGA.event({
+            category: 'icon_daily',
+            action: 'Started icon daily footdle game'
+          });
+
+        }else if(value.isDenied){
           random_gen_func = Math.random
+          ReactGA.event({
+            category: 'icon_random',
+            action: 'Started icon random footdle game'
+          });
         }
 
         let l = Math.floor(random_gen_func() * icons.length);
-        setAnswer(icons[l])
-
-        // console.log("Selected Icon", icons[l])
-        // console.log("setting to icon", true)
         // console.log(icons[l])
+        setAnswer(icons[l])
+      }else if(value.isDismissed){
+        showMenu()
       }
     })
 }
 
-  let showMenu = () => {
 
+let showMenu = () => {
+  MySwal.fire({
+    showCancelButton: true,
+    showConfirmButton: true,
+    confirmButtonColor:'#a77e05',
+    confirmButtonText:"Footdle",
+    denyButtonText: "Footdle Icons",
+    cancelButtonColor:"darkgreen",
+    cancelButtonText:"Footdle Higher/Lower",
+    denyButtonColor:"#343f81",
     
+    showDenyButton:true,
+    title:"Select which game to play!",
+    allowEscapeKey:false,
+    html:  <>
+        <PerfectScrollbar>
+        {/* <div style={{fontSize:'small', height:'50vh', fontWeight:50}}> */}
+          Choose which version of the game you want to play.
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+
+        {/* </div> */}
+        </PerfectScrollbar>
+    
+    </>,
+    allowOutsideClick: false,
+    
+  }).then((value)=>{
+    // console.log(value)
+    if(value.isConfirmed){
+      showClassicMenu()
+    } else if(value.isDenied){
+      showIconMenu()
+    } else if(value.isDismissed){
+      showHigherLowerMenu()
+    }
+  })
+}
+
+  let showClassicMenu = () => {
       let tutorial_guesses = [{'img': "https://cdn.sofifa.net/players/210/413/22_120.png",
       'key': "210413",
       'lig': "Italian Serie A",
@@ -669,17 +794,19 @@ let startHigherLowerGame = function(){
     MySwal.fire({
       showCancelButton: true,
       showConfirmButton: shouldShowToday,
+      confirmButtonColor:"#a77e05",
       confirmButtonText:"Today's Challenge",
-      denyButtonText: "Higher or Lower",
-      // denyButtonText: "Random Challenge",
-      denyButtonColor:"gray",
-      cancelButtonText:"Icons Mode",
-      cancelButtonColor:"orange",
+      // denyButtonText: "Higher or Lower",
+      denyButtonText: "Random Challenge",
+      denyButtonColor:"#484848",
+      cancelButtonText:"Back to Main Menu",
+      cancelButtonColor:"darkred",
+      showCancelButton:true,
       showDenyButton:true,
       allowEscapeKey:false,
       html:  <>
           <PerfectScrollbar>
-          <div style={{fontSize:'small', height:'50vh', fontWeight:50}}>
+          <div style={{fontSize:'small', height:'50vh', fontWeight:50,  fontSize:'large'}}>
       <p> <a href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQiA95aRBhCsARIsAC2xvfxJfXIVIYbjYglyykGKYkjFsfetU7UqG44ysm5Yh4L2baQZZ77Sc1kaAk6oEALw_wcB&gclsrc=aw.ds" > Kindly consider donating to Ukrainians in need </a></p>
         <p>Note: Scroll if entire tutorial is not visible :)</p>
         <p>A random player has been chosen from the top 300 rated players from the Top 5 Leagues on Fifa 22. The aim is to guess which player it is within {limit} attempts, by using players themselves as guesses.</p>
@@ -710,13 +837,23 @@ let startHigherLowerGame = function(){
           random_gen_func = getTodayRandom
           setCurrentGameIsDaily(true)
 
-          let l = Math.floor(random_gen_func() * players.length);
-        setAnswer(players[l])
+          ReactGA.event({
+            category: 'classic_daily',
+            action: 'Started classic daily footdle game'
+          });
 
-        console.log(players[l])
         }else if(value.isDenied){
-          showHigherLowerMenu()
+          random_gen_func = Math.random
+          ReactGA.event({
+            category: 'classic_random',
+            action: 'Started classic random footdle game'
+          });
         }
+
+        let l = Math.floor(random_gen_func() * players.length);
+        // console.log(players[l])
+
+        setAnswer(players[l])
 
         
       }
@@ -738,7 +875,7 @@ let startHigherLowerGame = function(){
       // }
 
       if(value.isDismissed){
-        showIconMenu()
+        showMenu()
       }
 
     })
@@ -925,6 +1062,15 @@ let startHigherLowerGame = function(){
     return st
   }
 
+  const highLowShareText = (managed) =>{ 
+    showAd()
+
+    let m = managed ? guesses.length:'X'
+    let st = "Footdle Higher or Lower " +dayOfYear()+"\nStreak: " + currentStreak + " ✅"
+
+    return st
+  }
+
 
   const makeGuess = (guess) => {
 
@@ -936,7 +1082,6 @@ let startHigherLowerGame = function(){
 
     updateClearField(true)
     setSelectedPlayer(undefined)
-
   }
   
   return (
@@ -948,25 +1093,23 @@ let startHigherLowerGame = function(){
         <div style ={{display:'flex', flexDirection:'column', alignItems:'center'}}>
         Current streak: {currentStreak} <br></br>
 
-
-        <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower}/>
+        <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower} lost={!gameActive}/>
         <ToastContainer 
-                      theme="dark" 
-                      position="middle-center"
-                      autoClose={3000}
-                      hideProgressBar={false}
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover={false}
-                      style={{ width: "100%" }}
-                    />
+          theme="dark" 
+          position="middle-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          style={{ width: "100%" }}
+        />
       </div>
       : ''
       }
-      
 
       {( () =>{
           if(currentGameIsHigherLower){

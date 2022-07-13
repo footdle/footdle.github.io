@@ -13,7 +13,13 @@
         "goals": 4,
         "assists": 0,
         "mins": 2536,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 20,
+        "fouls_won": 19,
+        "yellow_cards": 2,
+        "crosses": 1,
+        "offsides": 4,
+        "interceptions": 48
     },
     {
         "key": 106,
@@ -29,7 +35,13 @@
         "goals": 1,
         "assists": 3,
         "mins": 2260,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 41,
+        "fouls_won": 54,
+        "yellow_cards": 10,
+        "crosses": 124,
+        "offsides": 0,
+        "interceptions": 31
     },
     {
         "key": 207,
@@ -45,7 +57,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 2261,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 23,
+        "fouls_won": 26,
+        "yellow_cards": 3,
+        "crosses": 2,
+        "offsides": 1,
+        "interceptions": 47
     },
     {
         "key": 82,
@@ -61,7 +79,13 @@
         "goals": 2,
         "assists": 3,
         "mins": 2642,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 18,
+        "fouls_won": 13,
+        "yellow_cards": 2,
+        "crosses": 32,
+        "offsides": 2,
+        "interceptions": 41
     },
     {
         "key": 124,
@@ -77,7 +101,13 @@
         "goals": 2,
         "assists": 10,
         "mins": 2644,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 28,
+        "fouls_won": 25,
+        "yellow_cards": 11,
+        "crosses": 104,
+        "offsides": 11,
+        "interceptions": 48
     },
     {
         "key": 175,
@@ -93,7 +123,13 @@
         "goals": 5,
         "assists": 9,
         "mins": 2353,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 28,
+        "yellow_cards": 5,
+        "crosses": 50,
+        "offsides": 1,
+        "interceptions": 22
     },
     {
         "key": 251,
@@ -109,7 +145,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 2465,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 20,
+        "fouls_won": 13,
+        "yellow_cards": 8,
+        "crosses": 0,
+        "offsides": 2,
+        "interceptions": 37
     },
     {
         "key": 60,
@@ -125,7 +167,13 @@
         "goals": 1,
         "assists": 4,
         "mins": 1534,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 25,
+        "fouls_won": 26,
+        "yellow_cards": 2,
+        "crosses": 2,
+        "offsides": 0,
+        "interceptions": 35
     },
     {
         "key": 29,
@@ -141,23 +189,13 @@
         "goals": 2,
         "assists": 12,
         "mins": 2853,
-        "penalties": 0
-    },
-    {
-        "key": 285,
-        "pos": "LM",
-        "nat": "FR",
-        "lig": "English Premier League",
-        "tim": "Newcastle United",
-        "tim_url": "https://cdn.sofifa.net/teams/13/90.png",
-        "nam": "a. saint-maximin",
-        "nam_long": "allan saint-maximin",
-        "img": "https://cdn.sofifa.net/players/216/388/22_180.png",
-        "lig_url": "LeagueIcons/epl.png",
-        "goals": 0,
-        "assists": 2,
-        "mins": 2183,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 16,
+        "fouls_won": 9,
+        "yellow_cards": 2,
+        "crosses": 127,
+        "offsides": 11,
+        "interceptions": 76
     },
     {
         "key": 156,
@@ -170,10 +208,16 @@
         "nam_long": "jose angel esmoris tasende",
         "img": "https://cdn.sofifa.net/players/220/651/22_180.png",
         "lig_url": "LeagueIcons/bl.png",
-        "goals": 1,
-        "assists": 1,
-        "mins": 1083,
-        "penalties": 0
+        "goals": 2,
+        "assists": 5,
+        "mins": 2298,
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 40,
+        "yellow_cards": 3,
+        "crosses": 128,
+        "offsides": 4,
+        "interceptions": 35
     },
     {
         "key": 252,
@@ -189,7 +233,13 @@
         "goals": 4,
         "assists": 0,
         "mins": 2272,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 24,
+        "fouls_won": 13,
+        "yellow_cards": 6,
+        "crosses": 5,
+        "offsides": 1,
+        "interceptions": 37
     },
     {
         "key": 203,
@@ -205,7 +255,13 @@
         "goals": 2,
         "assists": 2,
         "mins": 749,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 18,
+        "fouls_won": 12,
+        "yellow_cards": 1,
+        "crosses": 2,
+        "offsides": 1,
+        "interceptions": 3
     },
     {
         "key": 155,
@@ -221,7 +277,13 @@
         "goals": 10,
         "assists": 0,
         "mins": 1731,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 12,
+        "fouls_won": 26,
+        "yellow_cards": 2,
+        "crosses": 43,
+        "offsides": 2,
+        "interceptions": 25
     },
     {
         "key": 121,
@@ -237,7 +299,13 @@
         "goals": 18,
         "assists": 5,
         "mins": 3087,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 26,
+        "fouls_won": 64,
+        "yellow_cards": 9,
+        "crosses": 86,
+        "offsides": 20,
+        "interceptions": 21
     },
     {
         "key": 181,
@@ -253,7 +321,13 @@
         "goals": 15,
         "assists": 2,
         "mins": 2119,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 25,
+        "fouls_won": 19,
+        "yellow_cards": 3,
+        "crosses": 18,
+        "offsides": 17,
+        "interceptions": 6
     },
     {
         "key": 182,
@@ -269,7 +343,13 @@
         "goals": 1,
         "assists": 2,
         "mins": 2070,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 29,
+        "fouls_won": 8,
+        "yellow_cards": 3,
+        "crosses": 37,
+        "offsides": 2,
+        "interceptions": 37
     },
     {
         "key": 269,
@@ -285,7 +365,13 @@
         "goals": 1,
         "assists": 2,
         "mins": 761,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 13,
+        "fouls_won": 12,
+        "yellow_cards": 3,
+        "crosses": 21,
+        "offsides": 3,
+        "interceptions": 3
     },
     {
         "key": 72,
@@ -301,7 +387,13 @@
         "goals": 3,
         "assists": 11,
         "mins": 2913,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 34,
+        "fouls_won": 59,
+        "yellow_cards": 9,
+        "crosses": 67,
+        "offsides": 4,
+        "interceptions": 34
     },
     {
         "key": 193,
@@ -317,7 +409,13 @@
         "goals": 1,
         "assists": 2,
         "mins": 2311,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 36,
+        "fouls_won": 34,
+        "yellow_cards": 4,
+        "crosses": 21,
+        "offsides": 0,
+        "interceptions": 38
     },
     {
         "key": 253,
@@ -333,7 +431,13 @@
         "goals": 3,
         "assists": 8,
         "mins": 2790,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 44,
+        "fouls_won": 102,
+        "yellow_cards": 9,
+        "crosses": 17,
+        "offsides": 5,
+        "interceptions": 44
     },
     {
         "key": 174,
@@ -349,7 +453,13 @@
         "goals": 25,
         "assists": 5,
         "mins": 2529,
-        "penalties": 8
+        "penalties": 8,
+        "fouls_made": 22,
+        "fouls_won": 24,
+        "yellow_cards": 3,
+        "crosses": 24,
+        "offsides": 23,
+        "interceptions": 6
     },
     {
         "key": 6,
@@ -365,7 +475,13 @@
         "goals": 27,
         "assists": 12,
         "mins": 2593,
-        "penalties": 7
+        "penalties": 7,
+        "fouls_made": 14,
+        "fouls_won": 12,
+        "yellow_cards": 0,
+        "crosses": 27,
+        "offsides": 31,
+        "interceptions": 7
     },
     {
         "key": 220,
@@ -381,7 +497,13 @@
         "goals": 15,
         "assists": 14,
         "mins": 2819,
-        "penalties": 6
+        "penalties": 6,
+        "fouls_made": 63,
+        "fouls_won": 83,
+        "yellow_cards": 9,
+        "crosses": 51,
+        "offsides": 11,
+        "interceptions": 51
     },
     {
         "key": 246,
@@ -397,7 +519,13 @@
         "goals": 1,
         "assists": 2,
         "mins": 1015,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 8,
+        "fouls_won": 22,
+        "yellow_cards": 3,
+        "crosses": 29,
+        "offsides": 0,
+        "interceptions": 28
     },
     {
         "key": 245,
@@ -413,7 +541,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 1622,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 2,
+        "yellow_cards": 6,
+        "crosses": 3,
+        "offsides": 0,
+        "interceptions": 34
     },
     {
         "key": 90,
@@ -429,7 +563,13 @@
         "goals": 5,
         "assists": 0,
         "mins": 2005,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 20,
+        "fouls_won": 9,
+        "yellow_cards": 1,
+        "crosses": 2,
+        "offsides": 1,
+        "interceptions": 35
     },
     {
         "key": 219,
@@ -445,7 +585,13 @@
         "goals": 9,
         "assists": 8,
         "mins": 2078,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 16,
+        "fouls_won": 19,
+        "yellow_cards": 3,
+        "crosses": 35,
+        "offsides": 2,
+        "interceptions": 25
     },
     {
         "key": 110,
@@ -461,7 +607,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 2937,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 53,
+        "fouls_won": 38,
+        "yellow_cards": 7,
+        "crosses": 16,
+        "offsides": 0,
+        "interceptions": 52
     },
     {
         "key": 123,
@@ -477,7 +629,13 @@
         "goals": 2,
         "assists": 0,
         "mins": 3198,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 69,
+        "fouls_won": 83,
+        "yellow_cards": 12,
+        "crosses": 4,
+        "offsides": 2,
+        "interceptions": 57
     },
     {
         "key": 165,
@@ -493,7 +651,13 @@
         "goals": 7,
         "assists": 12,
         "mins": 2480,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 41,
+        "fouls_won": 33,
+        "yellow_cards": 11,
+        "crosses": 53,
+        "offsides": 0,
+        "interceptions": 31
     },
     {
         "key": 280,
@@ -509,7 +673,13 @@
         "goals": 5,
         "assists": 2,
         "mins": 1283,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 21,
+        "fouls_won": 22,
+        "yellow_cards": 2,
+        "crosses": 3,
+        "offsides": 4,
+        "interceptions": 6
     },
     {
         "key": 226,
@@ -525,7 +695,13 @@
         "goals": 5,
         "assists": 1,
         "mins": 1690,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 34,
+        "fouls_won": 25,
+        "yellow_cards": 5,
+        "crosses": 5,
+        "offsides": 1,
+        "interceptions": 44
     },
     {
         "key": 179,
@@ -541,7 +717,13 @@
         "goals": 5,
         "assists": 8,
         "mins": 2791,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 28,
+        "fouls_won": 49,
+        "yellow_cards": 6,
+        "crosses": 43,
+        "offsides": 11,
+        "interceptions": 19
     },
     {
         "key": 34,
@@ -557,23 +739,13 @@
         "goals": 1,
         "assists": 7,
         "mins": 3227,
-        "penalties": 0
-    },
-    {
-        "key": 18,
-        "pos": "CDM",
-        "nat": "BR",
-        "lig": "Spain Primera Division",
-        "tim": "Real Madrid CF",
-        "tim_url": "https://cdn.sofifa.net/teams/243/90.png",
-        "nam": "casemiro",
-        "nam_long": "carlos henrique venancio casimiro",
-        "img": "https://cdn.sofifa.net/players/200/145/22_180.png",
-        "lig_url": "LeagueIcons/ll.png",
-        "goals": 0,
-        "assists": 0,
-        "mins": 7,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 37,
+        "fouls_won": 37,
+        "yellow_cards": 7,
+        "crosses": 103,
+        "offsides": 2,
+        "interceptions": 75
     },
     {
         "key": 215,
@@ -586,26 +758,16 @@
         "nam_long": "diego carlos santos silva",
         "img": "https://cdn.sofifa.net/players/219/693/22_180.png",
         "lig_url": "LeagueIcons/ll.png",
-        "goals": 0,
+        "goals": 3,
         "assists": 0,
-        "mins": 7,
-        "penalties": 0
-    },
-    {
-        "key": 262,
-        "pos": "CM",
-        "nat": "ES",
-        "lig": "Spain Primera Division",
-        "tim": "Valencia CF",
-        "tim_url": "https://cdn.sofifa.net/teams/461/90.png",
-        "nam": "carlos soler",
-        "nam_long": "carlos soler barragan",
-        "img": "https://cdn.sofifa.net/players/234/153/22_180.png",
-        "lig_url": "LeagueIcons/ll.png",
-        "goals": 0,
-        "assists": 0,
-        "mins": 7,
-        "penalties": 0
+        "mins": 2957,
+        "penalties": 0,
+        "fouls_made": 36,
+        "fouls_won": 19,
+        "yellow_cards": 4,
+        "crosses": 1,
+        "offsides": 1,
+        "interceptions": 52
     },
     {
         "key": 115,
@@ -621,7 +783,57 @@
         "goals": 6,
         "assists": 6,
         "mins": 2583,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 31,
+        "fouls_won": 49,
+        "yellow_cards": 5,
+        "crosses": 82,
+        "offsides": 13,
+        "interceptions": 37
+    },
+    {
+        "key": 79,
+        "pos": "RB",
+        "nat": "ES",
+        "lig": "Spain Primera Division",
+        "tim": "Real Madrid CF",
+        "tim_url": "https://cdn.sofifa.net/teams/243/90.png",
+        "nam": "carvajal",
+        "nam_long": "daniel carvajal ramos",
+        "img": "https://cdn.sofifa.net/players/204/963/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 1,
+        "assists": 3,
+        "mins": 1551,
+        "penalties": 0,
+        "fouls_made": 25,
+        "fouls_won": 11,
+        "yellow_cards": 1,
+        "crosses": 40,
+        "offsides": 0,
+        "interceptions": 34
+    },
+    {
+        "key": 18,
+        "pos": "CDM",
+        "nat": "BR",
+        "lig": "Spain Primera Division",
+        "tim": "Real Madrid CF",
+        "tim_url": "https://cdn.sofifa.net/teams/243/90.png",
+        "nam": "casemiro",
+        "nam_long": "carlos henrique venancio casimiro",
+        "img": "https://cdn.sofifa.net/players/200/145/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 1,
+        "assists": 3,
+        "mins": 2569,
+        "penalties": 0,
+        "fouls_made": 67,
+        "fouls_won": 41,
+        "yellow_cards": 11,
+        "crosses": 10,
+        "offsides": 4,
+        "interceptions": 59
     },
     {
         "key": 129,
@@ -637,7 +849,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 766,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 9,
+        "fouls_won": 6,
+        "yellow_cards": 0,
+        "crosses": 3,
+        "offsides": 6,
+        "interceptions": 9
     },
     {
         "key": 64,
@@ -653,7 +871,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 1354,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 20,
+        "fouls_won": 24,
+        "yellow_cards": 2,
+        "crosses": 1,
+        "offsides": 2,
+        "interceptions": 18
     },
     {
         "key": 98,
@@ -669,7 +893,13 @@
         "goals": 2,
         "assists": 2,
         "mins": 863,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 12,
+        "fouls_won": 20,
+        "yellow_cards": 0,
+        "crosses": 23,
+        "offsides": 1,
+        "interceptions": 8
     },
     {
         "key": 147,
@@ -685,7 +915,13 @@
         "goals": 3,
         "assists": 1,
         "mins": 542,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 10,
+        "fouls_won": 18,
+        "yellow_cards": 0,
+        "crosses": 10,
+        "offsides": 2,
+        "interceptions": 6
     },
     {
         "key": 217,
@@ -701,7 +937,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 1496,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 13,
+        "fouls_won": 7,
+        "yellow_cards": 2,
+        "crosses": 2,
+        "offsides": 0,
+        "interceptions": 52
     },
     {
         "key": 76,
@@ -717,7 +959,13 @@
         "goals": 6,
         "assists": 2,
         "mins": 1359,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 11,
+        "fouls_won": 24,
+        "yellow_cards": 1,
+        "crosses": 79,
+        "offsides": 5,
+        "interceptions": 15
     },
     {
         "key": 157,
@@ -733,7 +981,13 @@
         "goals": 12,
         "assists": 5,
         "mins": 1856,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 28,
+        "fouls_won": 35,
+        "yellow_cards": 3,
+        "crosses": 27,
+        "offsides": 10,
+        "interceptions": 15
     },
     {
         "key": 287,
@@ -749,7 +1003,13 @@
         "goals": 6,
         "assists": 1,
         "mins": 1025,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 16,
+        "fouls_won": 20,
+        "yellow_cards": 2,
+        "crosses": 11,
+        "offsides": 1,
+        "interceptions": 8
     },
     {
         "key": 244,
@@ -765,7 +1025,13 @@
         "goals": 7,
         "assists": 3,
         "mins": 1832,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 18,
+        "fouls_won": 40,
+        "yellow_cards": 1,
+        "crosses": 22,
+        "offsides": 6,
+        "interceptions": 14
     },
     {
         "key": 177,
@@ -781,7 +1047,13 @@
         "goals": 4,
         "assists": 3,
         "mins": 2487,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 28,
+        "fouls_won": 53,
+        "yellow_cards": 9,
+        "crosses": 81,
+        "offsides": 1,
+        "interceptions": 43
     },
     {
         "key": 259,
@@ -797,7 +1069,13 @@
         "goals": 1,
         "assists": 1,
         "mins": 3112,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 35,
+        "fouls_won": 37,
+        "yellow_cards": 6,
+        "crosses": 95,
+        "offsides": 3,
+        "interceptions": 74
     },
     {
         "key": 100,
@@ -813,7 +1091,13 @@
         "goals": 0,
         "assists": 3,
         "mins": 1740,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 15,
+        "fouls_won": 31,
+        "yellow_cards": 3,
+        "crosses": 60,
+        "offsides": 3,
+        "interceptions": 42
     },
     {
         "key": 4,
@@ -829,7 +1113,35 @@
         "goals": 15,
         "assists": 8,
         "mins": 2201,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 25,
+        "fouls_won": 36,
+        "yellow_cards": 2,
+        "crosses": 101,
+        "offsides": 5,
+        "interceptions": 14
+    },
+    {
+        "key": 159,
+        "pos": "CM",
+        "nat": "AR",
+        "lig": "Spain Primera Division",
+        "tim": "Atl\u00e9tico de Madrid",
+        "tim_url": "https://cdn.sofifa.net/teams/240/90.png",
+        "nam": "r. de paul",
+        "nam_long": "rodrigo javier de paul",
+        "img": "https://cdn.sofifa.net/players/212/616/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 3,
+        "assists": 1,
+        "mins": 2151,
+        "penalties": 0,
+        "fouls_made": 48,
+        "fouls_won": 69,
+        "yellow_cards": 7,
+        "crosses": 36,
+        "offsides": 1,
+        "interceptions": 31
     },
     {
         "key": 145,
@@ -845,7 +1157,13 @@
         "goals": 1,
         "assists": 13,
         "mins": 1409,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 11,
+        "fouls_won": 27,
+        "yellow_cards": 3,
+        "crosses": 96,
+        "offsides": 4,
+        "interceptions": 13
     },
     {
         "key": 53,
@@ -861,7 +1179,13 @@
         "goals": 12,
         "assists": 2,
         "mins": 1851,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 25,
+        "fouls_won": 55,
+        "yellow_cards": 3,
+        "crosses": 61,
+        "offsides": 13,
+        "interceptions": 6
     },
     {
         "key": 282,
@@ -877,7 +1201,13 @@
         "goals": 1,
         "assists": 4,
         "mins": 2869,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 47,
+        "fouls_won": 50,
+        "yellow_cards": 3,
+        "crosses": 47,
+        "offsides": 8,
+        "interceptions": 46
     },
     {
         "key": 62,
@@ -893,7 +1223,13 @@
         "goals": 5,
         "assists": 7,
         "mins": 1645,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 12,
+        "fouls_won": 16,
+        "yellow_cards": 2,
+        "crosses": 65,
+        "offsides": 7,
+        "interceptions": 18
     },
     {
         "key": 137,
@@ -909,7 +1245,13 @@
         "goals": 13,
         "assists": 12,
         "mins": 2760,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 41,
+        "fouls_won": 30,
+        "yellow_cards": 10,
+        "crosses": 87,
+        "offsides": 17,
+        "interceptions": 21
     },
     {
         "key": 143,
@@ -925,7 +1267,13 @@
         "goals": 11,
         "assists": 3,
         "mins": 2915,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 49,
+        "fouls_won": 52,
+        "yellow_cards": 7,
+        "crosses": 90,
+        "offsides": 14,
+        "interceptions": 43
     },
     {
         "key": 22,
@@ -941,7 +1289,13 @@
         "goals": 2,
         "assists": 4,
         "mins": 2402,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 30,
+        "fouls_won": 10,
+        "yellow_cards": 5,
+        "crosses": 5,
+        "offsides": 2,
+        "interceptions": 38
     },
     {
         "key": 139,
@@ -957,7 +1311,13 @@
         "goals": 4,
         "assists": 3,
         "mins": 958,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 16,
+        "fouls_won": 21,
+        "yellow_cards": 0,
+        "crosses": 22,
+        "offsides": 3,
+        "interceptions": 4
     },
     {
         "key": 172,
@@ -973,7 +1333,13 @@
         "goals": 0,
         "assists": 4,
         "mins": 2439,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 38,
+        "fouls_won": 34,
+        "yellow_cards": 6,
+        "crosses": 96,
+        "offsides": 3,
+        "interceptions": 63
     },
     {
         "key": 16,
@@ -989,7 +1355,35 @@
         "goals": 3,
         "assists": 1,
         "mins": 3060,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 10,
+        "fouls_won": 12,
+        "yellow_cards": 3,
+        "crosses": 0,
+        "offsides": 0,
+        "interceptions": 47
+    },
+    {
+        "key": 265,
+        "pos": "CB",
+        "nat": "BR",
+        "lig": "English Premier League",
+        "tim": "Arsenal",
+        "tim_url": "https://cdn.sofifa.net/teams/1/90.png",
+        "nam": "gabriel",
+        "nam_long": "gabriel dos s. magalhaes",
+        "img": "https://cdn.sofifa.net/players/232/580/22_180.png",
+        "lig_url": "LeagueIcons/epl.png",
+        "goals": 5,
+        "assists": 0,
+        "mins": 3063,
+        "penalties": 0,
+        "fouls_made": 24,
+        "fouls_won": 43,
+        "yellow_cards": 8,
+        "crosses": 4,
+        "offsides": 1,
+        "interceptions": 39
     },
     {
         "key": 264,
@@ -1005,7 +1399,13 @@
         "goals": 5,
         "assists": 4,
         "mins": 2028,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 33,
+        "fouls_won": 42,
+        "yellow_cards": 3,
+        "crosses": 52,
+        "offsides": 4,
+        "interceptions": 26
     },
     {
         "key": 33,
@@ -1021,7 +1421,13 @@
         "goals": 10,
         "assists": 5,
         "mins": 2061,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 20,
+        "fouls_won": 54,
+        "yellow_cards": 3,
+        "crosses": 33,
+        "offsides": 6,
+        "interceptions": 19
     },
     {
         "key": 128,
@@ -1037,7 +1443,13 @@
         "goals": 13,
         "assists": 6,
         "mins": 2469,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 28,
+        "fouls_won": 44,
+        "yellow_cards": 2,
+        "crosses": 37,
+        "offsides": 5,
+        "interceptions": 8
     },
     {
         "key": 195,
@@ -1053,7 +1465,13 @@
         "goals": 5,
         "assists": 1,
         "mins": 1277,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 11,
+        "fouls_won": 11,
+        "yellow_cards": 1,
+        "crosses": 4,
+        "offsides": 18,
+        "interceptions": 5
     },
     {
         "key": 243,
@@ -1069,7 +1487,13 @@
         "goals": 1,
         "assists": 4,
         "mins": 939,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 6,
+        "fouls_won": 4,
+        "yellow_cards": 1,
+        "crosses": 30,
+        "offsides": 0,
+        "interceptions": 10
     },
     {
         "key": 35,
@@ -1085,7 +1509,13 @@
         "goals": 5,
         "assists": 1,
         "mins": 2314,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 49,
+        "fouls_won": 39,
+        "yellow_cards": 7,
+        "crosses": 6,
+        "offsides": 0,
+        "interceptions": 56
     },
     {
         "key": 74,
@@ -1101,7 +1531,13 @@
         "goals": 6,
         "assists": 8,
         "mins": 2794,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 71,
+        "fouls_won": 117,
+        "yellow_cards": 7,
+        "crosses": 63,
+        "offsides": 9,
+        "interceptions": 16
     },
     {
         "key": 166,
@@ -1117,7 +1553,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 1504,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 27,
+        "fouls_won": 14,
+        "yellow_cards": 5,
+        "crosses": 0,
+        "offsides": 2,
+        "interceptions": 32
     },
     {
         "key": 136,
@@ -1133,7 +1575,13 @@
         "goals": 8,
         "assists": 4,
         "mins": 1263,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 67,
+        "yellow_cards": 3,
+        "crosses": 18,
+        "offsides": 9,
+        "interceptions": 8
     },
     {
         "key": 32,
@@ -1149,7 +1597,13 @@
         "goals": 10,
         "assists": 6,
         "mins": 3111,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 44,
+        "fouls_won": 60,
+        "yellow_cards": 10,
+        "crosses": 82,
+        "offsides": 3,
+        "interceptions": 38
     },
     {
         "key": 126,
@@ -1165,23 +1619,13 @@
         "goals": 1,
         "assists": 1,
         "mins": 1850,
-        "penalties": 0
-    },
-    {
-        "key": 146,
-        "pos": "RW",
-        "nat": "BR",
-        "lig": "English Premier League",
-        "tim": "Manchester City",
-        "tim_url": "https://cdn.sofifa.net/teams/10/90.png",
-        "nam": "gabriel jesus",
-        "nam_long": "gabriel fernando de jesus",
-        "img": "https://cdn.sofifa.net/players/230/666/22_180.png",
-        "lig_url": "LeagueIcons/epl.png",
-        "goals": 1,
-        "assists": 1,
-        "mins": 1850,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 19,
+        "fouls_won": 13,
+        "yellow_cards": 6,
+        "crosses": 2,
+        "offsides": 1,
+        "interceptions": 42
     },
     {
         "key": 80,
@@ -1197,7 +1641,13 @@
         "goals": 5,
         "assists": 4,
         "mins": 990,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 9,
+        "fouls_won": 9,
+        "yellow_cards": 3,
+        "crosses": 8,
+        "offsides": 3,
+        "interceptions": 4
     },
     {
         "key": 97,
@@ -1213,7 +1663,13 @@
         "goals": 9,
         "assists": 5,
         "mins": 2128,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 38,
+        "yellow_cards": 1,
+        "crosses": 59,
+        "offsides": 13,
+        "interceptions": 17
     },
     {
         "key": 296,
@@ -1229,23 +1685,35 @@
         "goals": 6,
         "assists": 2,
         "mins": 1706,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 13,
+        "fouls_won": 21,
+        "yellow_cards": 2,
+        "crosses": 17,
+        "offsides": 4,
+        "interceptions": 6
     },
     {
-        "key": 104,
+        "key": 240,
         "pos": "CDM",
-        "nat": "NG",
-        "lig": "English Premier League",
-        "tim": "Leicester City",
-        "tim_url": "https://cdn.sofifa.net/teams/95/90.png",
-        "nam": "w. ndidi",
-        "nam_long": "wilfred ndidi",
-        "img": "https://cdn.sofifa.net/players/226/790/22_180.png",
-        "lig_url": "LeagueIcons/epl.png",
-        "goals": 4,
-        "assists": 4,
-        "mins": 2028,
-        "penalties": 0
+        "nat": "SN",
+        "lig": "French Ligue 1",
+        "tim": "Paris Saint-Germain",
+        "tim_url": "https://cdn.sofifa.net/teams/73/90.png",
+        "nam": "i. gueye",
+        "nam_long": "idrissa gueye",
+        "img": "https://cdn.sofifa.net/players/193/474/22_180.png",
+        "lig_url": "LeagueIcons/lu.png",
+        "goals": 3,
+        "assists": 1,
+        "mins": 1641,
+        "penalties": 0,
+        "fouls_made": 45,
+        "fouls_won": 16,
+        "yellow_cards": 4,
+        "crosses": 4,
+        "offsides": 1,
+        "interceptions": 37
     },
     {
         "key": 167,
@@ -1261,7 +1729,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 2355,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 10,
+        "fouls_won": 29,
+        "yellow_cards": 2,
+        "crosses": 13,
+        "offsides": 2,
+        "interceptions": 46
     },
     {
         "key": 51,
@@ -1277,7 +1751,13 @@
         "goals": 14,
         "assists": 5,
         "mins": 2185,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 13,
+        "fouls_won": 24,
+        "yellow_cards": 0,
+        "crosses": 77,
+        "offsides": 15,
+        "interceptions": 26
     },
     {
         "key": 211,
@@ -1293,7 +1773,35 @@
         "goals": 0,
         "assists": 1,
         "mins": 331,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 5,
+        "fouls_won": 3,
+        "yellow_cards": 2,
+        "crosses": 17,
+        "offsides": 0,
+        "interceptions": 12
+    },
+    {
+        "key": 135,
+        "pos": "CAM",
+        "nat": "AR",
+        "lig": "Spain Primera Division",
+        "tim": "Sevilla FC",
+        "tim_url": "https://cdn.sofifa.net/teams/481/90.png",
+        "nam": "a. gomez",
+        "nam_long": "alejandro gomez",
+        "img": "https://cdn.sofifa.net/players/143/076/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 5,
+        "assists": 1,
+        "mins": 1784,
+        "penalties": 0,
+        "fouls_made": 26,
+        "fouls_won": 51,
+        "yellow_cards": 4,
+        "crosses": 38,
+        "offsides": 1,
+        "interceptions": 18
     },
     {
         "key": 24,
@@ -1309,7 +1817,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 1396,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 14,
+        "fouls_won": 12,
+        "yellow_cards": 0,
+        "crosses": 4,
+        "offsides": 1,
+        "interceptions": 33
     },
     {
         "key": 153,
@@ -1325,7 +1839,13 @@
         "goals": 1,
         "assists": 1,
         "mins": 629,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 4,
+        "fouls_won": 10,
+        "yellow_cards": 3,
+        "crosses": 11,
+        "offsides": 3,
+        "interceptions": 13
     },
     {
         "key": 117,
@@ -1341,7 +1861,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 1914,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 18,
+        "fouls_won": 65,
+        "yellow_cards": 3,
+        "crosses": 36,
+        "offsides": 5,
+        "interceptions": 16
     },
     {
         "key": 83,
@@ -1357,7 +1883,13 @@
         "goals": 3,
         "assists": 4,
         "mins": 1958,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 21,
+        "fouls_won": 38,
+        "yellow_cards": 3,
+        "crosses": 17,
+        "offsides": 10,
+        "interceptions": 24
     },
     {
         "key": 275,
@@ -1373,7 +1905,13 @@
         "goals": 11,
         "assists": 6,
         "mins": 2606,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 39,
+        "fouls_won": 88,
+        "yellow_cards": 3,
+        "crosses": 70,
+        "offsides": 5,
+        "interceptions": 19
     },
     {
         "key": 113,
@@ -1389,7 +1927,13 @@
         "goals": 4,
         "assists": 2,
         "mins": 1795,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 13,
+        "fouls_won": 8,
+        "yellow_cards": 1,
+        "crosses": 27,
+        "offsides": 1,
+        "interceptions": 38
     },
     {
         "key": 88,
@@ -1405,7 +1949,13 @@
         "goals": 8,
         "assists": 4,
         "mins": 1857,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 17,
+        "yellow_cards": 1,
+        "crosses": 24,
+        "offsides": 2,
+        "interceptions": 27
     },
     {
         "key": 23,
@@ -1421,7 +1971,13 @@
         "goals": 22,
         "assists": 8,
         "mins": 1911,
-        "penalties": 6
+        "penalties": 6,
+        "fouls_made": 17,
+        "fouls_won": 17,
+        "yellow_cards": 3,
+        "crosses": 8,
+        "offsides": 14,
+        "interceptions": 4
     },
     {
         "key": 66,
@@ -1437,7 +1993,13 @@
         "goals": 4,
         "assists": 6,
         "mins": 2479,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 20,
+        "fouls_won": 18,
+        "yellow_cards": 3,
+        "crosses": 52,
+        "offsides": 6,
+        "interceptions": 45
     },
     {
         "key": 281,
@@ -1453,7 +2015,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 1386,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 19,
+        "fouls_won": 10,
+        "yellow_cards": 2,
+        "crosses": 31,
+        "offsides": 3,
+        "interceptions": 6
     },
     {
         "key": 99,
@@ -1469,7 +2037,13 @@
         "goals": 8,
         "assists": 3,
         "mins": 1809,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 43,
+        "fouls_won": 31,
+        "yellow_cards": 3,
+        "crosses": 20,
+        "offsides": 12,
+        "interceptions": 6
     },
     {
         "key": 127,
@@ -1485,7 +2059,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 717,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 9,
+        "fouls_won": 36,
+        "yellow_cards": 3,
+        "crosses": 13,
+        "offsides": 4,
+        "interceptions": 8
     },
     {
         "key": 183,
@@ -1501,7 +2081,13 @@
         "goals": 2,
         "assists": 5,
         "mins": 2597,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 33,
+        "fouls_won": 13,
+        "yellow_cards": 3,
+        "crosses": 48,
+        "offsides": 3,
+        "interceptions": 43
     },
     {
         "key": 205,
@@ -1517,7 +2103,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 1865,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 26,
+        "fouls_won": 14,
+        "yellow_cards": 6,
+        "crosses": 15,
+        "offsides": 1,
+        "interceptions": 36
     },
     {
         "key": 107,
@@ -1533,7 +2125,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 2030,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 23,
+        "fouls_won": 42,
+        "yellow_cards": 7,
+        "crosses": 5,
+        "offsides": 0,
+        "interceptions": 41
     },
     {
         "key": 101,
@@ -1549,7 +2147,35 @@
         "goals": 5,
         "assists": 5,
         "mins": 2711,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 36,
+        "fouls_won": 79,
+        "yellow_cards": 7,
+        "crosses": 69,
+        "offsides": 8,
+        "interceptions": 55
+    },
+    {
+        "key": 19,
+        "pos": "LW",
+        "nat": "XX",
+        "lig": "English Premier League",
+        "tim": "Tottenham Hotspur",
+        "tim_url": "https://cdn.sofifa.net/teams/18/90.png",
+        "nam": "h. son",
+        "nam_long": "heung min son",
+        "img": "https://cdn.sofifa.net/players/200/104/22_180.png",
+        "lig_url": "LeagueIcons/epl.png",
+        "goals": 23,
+        "assists": 7,
+        "mins": 3006,
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 46,
+        "yellow_cards": 2,
+        "crosses": 65,
+        "offsides": 16,
+        "interceptions": 29
     },
     {
         "key": 91,
@@ -1565,23 +2191,35 @@
         "goals": 1,
         "assists": 2,
         "mins": 1765,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 14,
+        "yellow_cards": 4,
+        "crosses": 2,
+        "offsides": 1,
+        "interceptions": 58
     },
     {
-        "key": 94,
-        "pos": "CB",
-        "nat": "BR",
+        "key": 218,
+        "pos": "CDM",
+        "nat": "DK",
         "lig": "English Premier League",
-        "tim": "Chelsea",
-        "tim_url": "https://cdn.sofifa.net/teams/5/90.png",
-        "nam": "thiago silva",
-        "nam_long": "thiago emiliano da silva",
-        "img": "https://cdn.sofifa.net/players/164/240/22_180.png",
+        "tim": "Tottenham Hotspur",
+        "tim_url": "https://cdn.sofifa.net/teams/18/90.png",
+        "nam": "p. hojbjerg",
+        "nam_long": "pierre-emile hojbjerg",
+        "img": "https://cdn.sofifa.net/players/213/648/22_180.png",
         "lig_url": "LeagueIcons/epl.png",
         "goals": 2,
-        "assists": 5,
-        "mins": 2174,
-        "penalties": 0
+        "assists": 2,
+        "mins": 3196,
+        "penalties": 0,
+        "fouls_made": 44,
+        "fouls_won": 47,
+        "yellow_cards": 3,
+        "crosses": 21,
+        "offsides": 0,
+        "interceptions": 70
     },
     {
         "key": 185,
@@ -1597,23 +2235,13 @@
         "goals": 8,
         "assists": 2,
         "mins": 1016,
-        "penalties": 0
-    },
-    {
-        "key": 295,
-        "pos": "RB",
-        "nat": "ES",
-        "lig": "Spain Primera Division",
-        "tim": "Real Madrid CF",
-        "tim_url": "https://cdn.sofifa.net/teams/243/90.png",
-        "nam": "lucas vazquez",
-        "nam_long": "lucas vazquez iglesias",
-        "img": "https://cdn.sofifa.net/players/208/618/22_180.png",
-        "lig_url": "LeagueIcons/ll.png",
-        "goals": 0,
-        "assists": 1,
-        "mins": 719,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 15,
+        "fouls_won": 11,
+        "yellow_cards": 2,
+        "crosses": 8,
+        "offsides": 19,
+        "interceptions": 7
     },
     {
         "key": 171,
@@ -1629,7 +2257,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 841,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 15,
+        "fouls_won": 39,
+        "yellow_cards": 1,
+        "crosses": 17,
+        "offsides": 1,
+        "interceptions": 2
     },
     {
         "key": 58,
@@ -1645,7 +2279,13 @@
         "goals": 27,
         "assists": 2,
         "mins": 2711,
-        "penalties": 7
+        "penalties": 7,
+        "fouls_made": 36,
+        "fouls_won": 41,
+        "yellow_cards": 4,
+        "crosses": 25,
+        "offsides": 13,
+        "interceptions": 12
     },
     {
         "key": 56,
@@ -1661,7 +2301,13 @@
         "goals": 11,
         "assists": 8,
         "mins": 2290,
-        "penalties": 9
+        "penalties": 9,
+        "fouls_made": 19,
+        "fouls_won": 25,
+        "yellow_cards": 2,
+        "crosses": 52,
+        "offsides": 5,
+        "interceptions": 40
     },
     {
         "key": 199,
@@ -1677,23 +2323,13 @@
         "goals": 6,
         "assists": 2,
         "mins": 2140,
-        "penalties": 2
-    },
-    {
-        "key": 190,
-        "pos": "CB",
-        "nat": "ES",
-        "lig": "Spain Primera Division",
-        "tim": "Villarreal CF",
-        "tim_url": "https://cdn.sofifa.net/teams/483/90.png",
-        "nam": "pau torres",
-        "nam_long": "pau francisco torres",
-        "img": "https://cdn.sofifa.net/players/241/464/22_180.png",
-        "lig_url": "LeagueIcons/ll.png",
-        "goals": 1,
-        "assists": 0,
-        "mins": 267,
-        "penalties": 0
+        "penalties": 2,
+        "fouls_made": 33,
+        "fouls_won": 34,
+        "yellow_cards": 6,
+        "crosses": 22,
+        "offsides": 15,
+        "interceptions": 4
     },
     {
         "key": 239,
@@ -1709,7 +2345,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 267,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 10,
+        "fouls_won": 14,
+        "yellow_cards": 1,
+        "crosses": 4,
+        "offsides": 0,
+        "interceptions": 2
     },
     {
         "key": 192,
@@ -1725,7 +2367,13 @@
         "goals": 5,
         "assists": 9,
         "mins": 1864,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 18,
+        "fouls_won": 37,
+        "yellow_cards": 4,
+        "crosses": 82,
+        "offsides": 4,
+        "interceptions": 21
     },
     {
         "key": 298,
@@ -1741,7 +2389,35 @@
         "goals": 3,
         "assists": 0,
         "mins": 1625,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 28,
+        "fouls_won": 61,
+        "yellow_cards": 5,
+        "crosses": 58,
+        "offsides": 4,
+        "interceptions": 17
+    },
+    {
+        "key": 146,
+        "pos": "RW",
+        "nat": "BR",
+        "lig": "English Premier League",
+        "tim": "Manchester City",
+        "tim_url": "https://cdn.sofifa.net/teams/10/90.png",
+        "nam": "gabriel jesus",
+        "nam_long": "gabriel fernando de jesus",
+        "img": "https://cdn.sofifa.net/players/230/666/22_180.png",
+        "lig_url": "LeagueIcons/epl.png",
+        "goals": 8,
+        "assists": 8,
+        "mins": 1877,
+        "penalties": 1,
+        "fouls_made": 30,
+        "fouls_won": 31,
+        "yellow_cards": 1,
+        "crosses": 27,
+        "offsides": 10,
+        "interceptions": 18
     },
     {
         "key": 230,
@@ -1757,7 +2433,13 @@
         "goals": 6,
         "assists": 4,
         "mins": 2631,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 55,
+        "fouls_won": 58,
+        "yellow_cards": 9,
+        "crosses": 20,
+        "offsides": 23,
+        "interceptions": 19
     },
     {
         "key": 30,
@@ -1773,7 +2455,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 2476,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 27,
+        "fouls_won": 52,
+        "yellow_cards": 7,
+        "crosses": 22,
+        "offsides": 6,
+        "interceptions": 31
     },
     {
         "key": 77,
@@ -1789,7 +2477,13 @@
         "goals": 6,
         "assists": 2,
         "mins": 2273,
-        "penalties": 6
+        "penalties": 6,
+        "fouls_made": 39,
+        "fouls_won": 44,
+        "yellow_cards": 5,
+        "crosses": 3,
+        "offsides": 0,
+        "interceptions": 60
     },
     {
         "key": 105,
@@ -1805,7 +2499,35 @@
         "goals": 15,
         "assists": 4,
         "mins": 2364,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 40,
+        "fouls_won": 45,
+        "yellow_cards": 3,
+        "crosses": 16,
+        "offsides": 5,
+        "interceptions": 17
+    },
+    {
+        "key": 96,
+        "pos": "LW",
+        "nat": "BR",
+        "lig": "Spain Primera Division",
+        "tim": "Real Madrid CF",
+        "tim_url": "https://cdn.sofifa.net/teams/243/90.png",
+        "nam": "vinicius jr.",
+        "nam_long": "vinicius jose de oliveira junior",
+        "img": "https://cdn.sofifa.net/players/238/794/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 17,
+        "assists": 10,
+        "mins": 2690,
+        "penalties": 0,
+        "fouls_made": 42,
+        "fouls_won": 82,
+        "yellow_cards": 6,
+        "crosses": 59,
+        "offsides": 26,
+        "interceptions": 14
     },
     {
         "key": 17,
@@ -1821,7 +2543,13 @@
         "goals": 17,
         "assists": 9,
         "mins": 3232,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 46,
+        "fouls_won": 70,
+        "yellow_cards": 5,
+        "crosses": 40,
+        "offsides": 17,
+        "interceptions": 7
     },
     {
         "key": 8,
@@ -1837,7 +2565,35 @@
         "goals": 2,
         "assists": 4,
         "mins": 1773,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 30,
+        "fouls_won": 26,
+        "yellow_cards": 2,
+        "crosses": 11,
+        "offsides": 0,
+        "interceptions": 44
+    },
+    {
+        "key": 103,
+        "pos": "CDM",
+        "nat": "CI",
+        "lig": "Italian Serie A",
+        "tim": "AC Milan",
+        "tim_url": "https://cdn.sofifa.net/teams/47/90.png",
+        "nam": "f. kessie",
+        "nam_long": "franck yannick kessie",
+        "img": "https://cdn.sofifa.net/players/230/938/22_180.png",
+        "lig_url": "LeagueIcons/sa.png",
+        "goals": 6,
+        "assists": 0,
+        "mins": 2308,
+        "penalties": 2,
+        "fouls_made": 38,
+        "fouls_won": 35,
+        "yellow_cards": 2,
+        "crosses": 10,
+        "offsides": 1,
+        "interceptions": 48
     },
     {
         "key": 13,
@@ -1853,7 +2609,13 @@
         "goals": 3,
         "assists": 9,
         "mins": 2474,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 23,
+        "fouls_won": 58,
+        "yellow_cards": 4,
+        "crosses": 34,
+        "offsides": 1,
+        "interceptions": 64
     },
     {
         "key": 150,
@@ -1869,7 +2631,35 @@
         "goals": 1,
         "assists": 0,
         "mins": 2576,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 30,
+        "fouls_won": 27,
+        "yellow_cards": 6,
+        "crosses": 2,
+        "offsides": 0,
+        "interceptions": 54
+    },
+    {
+        "key": 130,
+        "pos": "CB",
+        "nat": "DK",
+        "lig": "Italian Serie A",
+        "tim": "AC Milan",
+        "tim_url": "https://cdn.sofifa.net/teams/47/90.png",
+        "nam": "s. kjaer",
+        "nam_long": "simon kjaer",
+        "img": "https://cdn.sofifa.net/players/179/645/22_180.png",
+        "lig_url": "LeagueIcons/sa.png",
+        "goals": 0,
+        "assists": 0,
+        "mins": 802,
+        "penalties": 0,
+        "fouls_made": 20,
+        "fouls_won": 6,
+        "yellow_cards": 2,
+        "crosses": 2,
+        "offsides": 0,
+        "interceptions": 12
     },
     {
         "key": 84,
@@ -1885,7 +2675,13 @@
         "goals": 1,
         "assists": 2,
         "mins": 2508,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 36,
+        "fouls_won": 33,
+        "yellow_cards": 6,
+        "crosses": 23,
+        "offsides": 0,
+        "interceptions": 30
     },
     {
         "key": 114,
@@ -1901,7 +2697,13 @@
         "goals": 4,
         "assists": 9,
         "mins": 2522,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 18,
+        "fouls_won": 26,
+        "yellow_cards": 2,
+        "crosses": 191,
+        "offsides": 3,
+        "interceptions": 31
     },
     {
         "key": 55,
@@ -1917,7 +2719,13 @@
         "goals": 3,
         "assists": 1,
         "mins": 2405,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 32,
+        "fouls_won": 13,
+        "yellow_cards": 5,
+        "crosses": 2,
+        "offsides": 0,
+        "interceptions": 40
     },
     {
         "key": 138,
@@ -1933,7 +2741,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 2736,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 22,
+        "fouls_won": 28,
+        "yellow_cards": 2,
+        "crosses": 11,
+        "offsides": 2,
+        "interceptions": 55
     },
     {
         "key": 116,
@@ -1949,7 +2763,13 @@
         "goals": 2,
         "assists": 5,
         "mins": 1558,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 30,
+        "fouls_won": 35,
+        "yellow_cards": 4,
+        "crosses": 5,
+        "offsides": 0,
+        "interceptions": 20
     },
     {
         "key": 216,
@@ -1965,7 +2785,13 @@
         "goals": 6,
         "assists": 9,
         "mins": 2707,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 10,
+        "fouls_won": 32,
+        "yellow_cards": 2,
+        "crosses": 53,
+        "offsides": 8,
+        "interceptions": 15
     },
     {
         "key": 27,
@@ -1981,7 +2807,13 @@
         "goals": 1,
         "assists": 3,
         "mins": 2103,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 21,
+        "fouls_won": 42,
+        "yellow_cards": 4,
+        "crosses": 31,
+        "offsides": 0,
+        "interceptions": 17
     },
     {
         "key": 294,
@@ -1997,7 +2829,13 @@
         "goals": 15,
         "assists": 8,
         "mins": 3070,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 38,
+        "fouls_won": 24,
+        "yellow_cards": 2,
+        "crosses": 44,
+        "offsides": 21,
+        "interceptions": 21
     },
     {
         "key": 241,
@@ -2013,7 +2851,13 @@
         "goals": 4,
         "assists": 7,
         "mins": 1782,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 37,
+        "fouls_won": 36,
+        "yellow_cards": 0,
+        "crosses": 7,
+        "offsides": 6,
+        "interceptions": 13
     },
     {
         "key": 274,
@@ -2029,7 +2873,13 @@
         "goals": 4,
         "assists": 4,
         "mins": 1240,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 45,
+        "fouls_won": 11,
+        "yellow_cards": 2,
+        "crosses": 12,
+        "offsides": 0,
+        "interceptions": 14
     },
     {
         "key": 48,
@@ -2045,7 +2895,13 @@
         "goals": 4,
         "assists": 0,
         "mins": 2828,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 15,
+        "fouls_won": 13,
+        "yellow_cards": 5,
+        "crosses": 5,
+        "offsides": 2,
+        "interceptions": 33
     },
     {
         "key": 256,
@@ -2061,7 +2917,13 @@
         "goals": 11,
         "assists": 10,
         "mins": 2605,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 29,
+        "fouls_won": 49,
+        "yellow_cards": 4,
+        "crosses": 69,
+        "offsides": 8,
+        "interceptions": 22
     },
     {
         "key": 158,
@@ -2077,7 +2939,13 @@
         "goals": 4,
         "assists": 5,
         "mins": 1440,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 14,
+        "fouls_won": 28,
+        "yellow_cards": 2,
+        "crosses": 54,
+        "offsides": 2,
+        "interceptions": 18
     },
     {
         "key": 1,
@@ -2093,7 +2961,13 @@
         "goals": 35,
         "assists": 3,
         "mins": 2946,
-        "penalties": 5
+        "penalties": 5,
+        "fouls_made": 25,
+        "fouls_won": 44,
+        "yellow_cards": 2,
+        "crosses": 29,
+        "offsides": 20,
+        "interceptions": 12
     },
     {
         "key": 65,
@@ -2109,7 +2983,13 @@
         "goals": 3,
         "assists": 1,
         "mins": 2674,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 32,
+        "fouls_won": 17,
+        "yellow_cards": 4,
+        "crosses": 5,
+        "offsides": 2,
+        "interceptions": 42
     },
     {
         "key": 71,
@@ -2125,7 +3005,13 @@
         "goals": 0,
         "assists": 2,
         "mins": 2447,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 30,
+        "fouls_won": 27,
+        "yellow_cards": 5,
+        "crosses": 74,
+        "offsides": 7,
+        "interceptions": 42
     },
     {
         "key": 212,
@@ -2141,7 +3027,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 2160,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 42,
+        "fouls_won": 29,
+        "yellow_cards": 6,
+        "crosses": 8,
+        "offsides": 2,
+        "interceptions": 38
     },
     {
         "key": 254,
@@ -2157,7 +3049,13 @@
         "goals": 2,
         "assists": 2,
         "mins": 1181,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 23,
+        "fouls_won": 24,
+        "yellow_cards": 4,
+        "crosses": 41,
+        "offsides": 3,
+        "interceptions": 27
     },
     {
         "key": 279,
@@ -2173,7 +3071,13 @@
         "goals": 5,
         "assists": 5,
         "mins": 1613,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 32,
+        "fouls_won": 39,
+        "yellow_cards": 3,
+        "crosses": 43,
+        "offsides": 14,
+        "interceptions": 14
     },
     {
         "key": 162,
@@ -2189,7 +3093,13 @@
         "goals": 2,
         "assists": 4,
         "mins": 1871,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 35,
+        "fouls_won": 23,
+        "yellow_cards": 8,
+        "crosses": 62,
+        "offsides": 4,
+        "interceptions": 39
     },
     {
         "key": 283,
@@ -2205,7 +3115,13 @@
         "goals": 13,
         "assists": 7,
         "mins": 2719,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 33,
+        "fouls_won": 46,
+        "yellow_cards": 7,
+        "crosses": 77,
+        "offsides": 15,
+        "interceptions": 16
     },
     {
         "key": 39,
@@ -2221,7 +3137,13 @@
         "goals": 8,
         "assists": 0,
         "mins": 1589,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 8,
+        "fouls_won": 14,
+        "yellow_cards": 1,
+        "crosses": 9,
+        "offsides": 14,
+        "interceptions": 1
     },
     {
         "key": 213,
@@ -2237,7 +3159,13 @@
         "goals": 12,
         "assists": 8,
         "mins": 2459,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 26,
+        "fouls_won": 80,
+        "yellow_cards": 3,
+        "crosses": 49,
+        "offsides": 4,
+        "interceptions": 20
     },
     {
         "key": 232,
@@ -2253,7 +3181,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 2515,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 23,
+        "fouls_won": 23,
+        "yellow_cards": 9,
+        "crosses": 1,
+        "offsides": 1,
+        "interceptions": 53
     },
     {
         "key": 52,
@@ -2269,7 +3203,13 @@
         "goals": 11,
         "assists": 5,
         "mins": 1498,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 10,
+        "fouls_won": 18,
+        "yellow_cards": 0,
+        "crosses": 54,
+        "offsides": 3,
+        "interceptions": 13
     },
     {
         "key": 267,
@@ -2285,7 +3225,13 @@
         "goals": 6,
         "assists": 5,
         "mins": 1592,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 44,
+        "fouls_won": 48,
+        "yellow_cards": 10,
+        "crosses": 33,
+        "offsides": 3,
+        "interceptions": 7
     },
     {
         "key": 15,
@@ -2301,7 +3247,13 @@
         "goals": 16,
         "assists": 2,
         "mins": 2819,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 52,
+        "fouls_won": 61,
+        "yellow_cards": 5,
+        "crosses": 51,
+        "offsides": 19,
+        "interceptions": 15
     },
     {
         "key": 108,
@@ -2314,10 +3266,16 @@
         "nam_long": "jose maria gimenez",
         "img": "https://cdn.sofifa.net/players/216/460/22_180.png",
         "lig_url": "LeagueIcons/ll.png",
-        "goals": 0,
-        "assists": 0,
-        "mins": 386,
-        "penalties": 0
+        "goals": 1,
+        "assists": 1,
+        "mins": 2042,
+        "penalties": 0,
+        "fouls_made": 14,
+        "fouls_won": 24,
+        "yellow_cards": 7,
+        "crosses": 1,
+        "offsides": 2,
+        "interceptions": 23
     },
     {
         "key": 25,
@@ -2333,7 +3291,13 @@
         "goals": 5,
         "assists": 0,
         "mins": 2861,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 8,
+        "fouls_won": 11,
+        "yellow_cards": 5,
+        "crosses": 7,
+        "offsides": 1,
+        "interceptions": 50
     },
     {
         "key": 291,
@@ -2349,7 +3313,13 @@
         "goals": 1,
         "assists": 1,
         "mins": 702,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 7,
+        "fouls_won": 16,
+        "yellow_cards": 1,
+        "crosses": 12,
+        "offsides": 2,
+        "interceptions": 4
     },
     {
         "key": 69,
@@ -2362,42 +3332,16 @@
         "nam_long": "lautaro martinez",
         "img": "https://cdn.sofifa.net/players/231/478/22_180.png",
         "lig_url": "LeagueIcons/sa.png",
-        "goals": 0,
-        "assists": 0,
-        "mins": 115,
-        "penalties": 0
-    },
-    {
-        "key": 154,
-        "pos": "CAM",
-        "nat": "NO",
-        "lig": "English Premier League",
-        "tim": "Arsenal",
-        "tim_url": "https://cdn.sofifa.net/teams/1/90.png",
-        "nam": "m. odegaard",
-        "nam_long": "martin odegaard",
-        "img": "https://cdn.sofifa.net/players/222/665/22_180.png",
-        "lig_url": "LeagueIcons/epl.png",
-        "goals": 0,
-        "assists": 0,
-        "mins": 115,
-        "penalties": 0
-    },
-    {
-        "key": 234,
-        "pos": "ST",
-        "nat": "ES",
-        "lig": "Italian Serie A",
-        "tim": "Juventus",
-        "tim_url": "https://cdn.sofifa.net/teams/45/90.png",
-        "nam": "morata",
-        "nam_long": "alvaro borja morata martin",
-        "img": "https://cdn.sofifa.net/players/201/153/22_180.png",
-        "lig_url": "LeagueIcons/sa.png",
-        "goals": 0,
-        "assists": 0,
-        "mins": 115,
-        "penalties": 0
+        "goals": 21,
+        "assists": 3,
+        "mins": 2282,
+        "penalties": 3,
+        "fouls_made": 42,
+        "fouls_won": 58,
+        "yellow_cards": 6,
+        "crosses": 18,
+        "offsides": 12,
+        "interceptions": 22
     },
     {
         "key": 120,
@@ -2413,7 +3357,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 2790,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 16,
+        "fouls_won": 19,
+        "yellow_cards": 2,
+        "crosses": 0,
+        "offsides": 0,
+        "interceptions": 66
     },
     {
         "key": 2,
@@ -2429,7 +3379,13 @@
         "goals": 28,
         "assists": 18,
         "mins": 3023,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 27,
+        "fouls_won": 58,
+        "yellow_cards": 10,
+        "crosses": 86,
+        "offsides": 39,
+        "interceptions": 14
     },
     {
         "key": 260,
@@ -2445,7 +3401,13 @@
         "goals": 1,
         "assists": 1,
         "mins": 2387,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 58,
+        "fouls_won": 47,
+        "yellow_cards": 9,
+        "crosses": 8,
+        "offsides": 1,
+        "interceptions": 47
     },
     {
         "key": 149,
@@ -2461,7 +3423,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 1734,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 14,
+        "fouls_won": 26,
+        "yellow_cards": 4,
+        "crosses": 27,
+        "offsides": 3,
+        "interceptions": 33
     },
     {
         "key": 151,
@@ -2477,7 +3445,13 @@
         "goals": 3,
         "assists": 2,
         "mins": 2890,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 70,
+        "fouls_won": 73,
+        "yellow_cards": 8,
+        "crosses": 20,
+        "offsides": 4,
+        "interceptions": 37
     },
     {
         "key": 131,
@@ -2493,7 +3467,13 @@
         "goals": 11,
         "assists": 1,
         "mins": 1384,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 29,
+        "fouls_won": 24,
+        "yellow_cards": 2,
+        "crosses": 17,
+        "offsides": 5,
+        "interceptions": 7
     },
     {
         "key": 0,
@@ -2509,23 +3489,13 @@
         "goals": 6,
         "assists": 14,
         "mins": 2153,
-        "penalties": 0
-    },
-    {
-        "key": 148,
-        "pos": "ST",
-        "nat": "PT",
-        "lig": "German 1. Bundesliga",
-        "tim": "RB Leipzig",
-        "tim_url": "https://cdn.sofifa.net/teams/112172/90.png",
-        "nam": "andre silva",
-        "nam_long": "andre miguel valente da silva",
-        "img": "https://cdn.sofifa.net/players/228/941/22_180.png",
-        "lig_url": "LeagueIcons/bl.png",
-        "goals": 1,
-        "assists": 1,
-        "mins": 829,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 8,
+        "fouls_won": 38,
+        "yellow_cards": 0,
+        "crosses": 18,
+        "offsides": 10,
+        "interceptions": 12
     },
     {
         "key": 73,
@@ -2541,7 +3511,13 @@
         "goals": 11,
         "assists": 10,
         "mins": 3100,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 64,
+        "fouls_won": 53,
+        "yellow_cards": 6,
+        "crosses": 50,
+        "offsides": 4,
+        "interceptions": 55
     },
     {
         "key": 140,
@@ -2557,7 +3533,13 @@
         "goals": 1,
         "assists": 2,
         "mins": 3031,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 41,
+        "fouls_won": 41,
+        "yellow_cards": 5,
+        "crosses": 12,
+        "offsides": 1,
+        "interceptions": 70
     },
     {
         "key": 41,
@@ -2573,7 +3555,35 @@
         "goals": 2,
         "assists": 8,
         "mins": 2032,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 24,
+        "fouls_won": 41,
+        "yellow_cards": 4,
+        "crosses": 33,
+        "offsides": 1,
+        "interceptions": 31
+    },
+    {
+        "key": 234,
+        "pos": "ST",
+        "nat": "ES",
+        "lig": "Italian Serie A",
+        "tim": "Juventus",
+        "tim_url": "https://cdn.sofifa.net/teams/45/90.png",
+        "nam": "morata",
+        "nam_long": "alvaro borja morata martin",
+        "img": "https://cdn.sofifa.net/players/201/153/22_180.png",
+        "lig_url": "LeagueIcons/sa.png",
+        "goals": 9,
+        "assists": 4,
+        "mins": 2302,
+        "penalties": 1,
+        "fouls_made": 49,
+        "fouls_won": 84,
+        "yellow_cards": 5,
+        "crosses": 28,
+        "offsides": 20,
+        "interceptions": 16
     },
     {
         "key": 50,
@@ -2589,7 +3599,13 @@
         "goals": 9,
         "assists": 3,
         "mins": 1191,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 14,
+        "fouls_won": 20,
+        "yellow_cards": 2,
+        "crosses": 13,
+        "offsides": 8,
+        "interceptions": 7
     },
     {
         "key": 144,
@@ -2605,7 +3621,13 @@
         "goals": 11,
         "assists": 10,
         "mins": 2363,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 37,
+        "fouls_won": 29,
+        "yellow_cards": 4,
+        "crosses": 79,
+        "offsides": 5,
+        "interceptions": 20
     },
     {
         "key": 40,
@@ -2621,7 +3643,13 @@
         "goals": 8,
         "assists": 18,
         "mins": 2558,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 16,
+        "fouls_won": 33,
+        "yellow_cards": 0,
+        "crosses": 77,
+        "offsides": 12,
+        "interceptions": 23
     },
     {
         "key": 122,
@@ -2637,7 +3665,13 @@
         "goals": 4,
         "assists": 10,
         "mins": 2785,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 15,
+        "fouls_won": 99,
+        "yellow_cards": 3,
+        "crosses": 80,
+        "offsides": 5,
+        "interceptions": 23
     },
     {
         "key": 237,
@@ -2653,7 +3687,13 @@
         "goals": 9,
         "assists": 8,
         "mins": 1539,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 16,
+        "fouls_won": 29,
+        "yellow_cards": 1,
+        "crosses": 32,
+        "offsides": 7,
+        "interceptions": 9
     },
     {
         "key": 134,
@@ -2669,7 +3709,35 @@
         "goals": 0,
         "assists": 3,
         "mins": 1786,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 5,
+        "fouls_won": 13,
+        "yellow_cards": 4,
+        "crosses": 87,
+        "offsides": 1,
+        "interceptions": 25
+    },
+    {
+        "key": 104,
+        "pos": "CDM",
+        "nat": "NG",
+        "lig": "English Premier League",
+        "tim": "Leicester City",
+        "tim_url": "https://cdn.sofifa.net/teams/95/90.png",
+        "nam": "w. ndidi",
+        "nam_long": "wilfred ndidi",
+        "img": "https://cdn.sofifa.net/players/226/790/22_180.png",
+        "lig_url": "LeagueIcons/epl.png",
+        "goals": 0,
+        "assists": 0,
+        "mins": 1618,
+        "penalties": 0,
+        "fouls_made": 34,
+        "fouls_won": 26,
+        "yellow_cards": 4,
+        "crosses": 2,
+        "offsides": 1,
+        "interceptions": 45
     },
     {
         "key": 261,
@@ -2685,7 +3753,13 @@
         "goals": 4,
         "assists": 4,
         "mins": 2121,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 23,
+        "fouls_won": 37,
+        "yellow_cards": 2,
+        "crosses": 9,
+        "offsides": 0,
+        "interceptions": 47
     },
     {
         "key": 152,
@@ -2701,7 +3775,13 @@
         "goals": 4,
         "assists": 2,
         "mins": 2661,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 33,
+        "fouls_won": 18,
+        "yellow_cards": 9,
+        "crosses": 21,
+        "offsides": 1,
+        "interceptions": 55
     },
     {
         "key": 5,
@@ -2717,7 +3797,13 @@
         "goals": 13,
         "assists": 6,
         "mins": 1851,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 32,
+        "fouls_won": 74,
+        "yellow_cards": 10,
+        "crosses": 32,
+        "offsides": 11,
+        "interceptions": 14
     },
     {
         "key": 297,
@@ -2733,7 +3819,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 681,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 15,
+        "fouls_won": 3,
+        "yellow_cards": 1,
+        "crosses": 9,
+        "offsides": 1,
+        "interceptions": 16
     },
     {
         "key": 68,
@@ -2749,7 +3841,13 @@
         "goals": 20,
         "assists": 13,
         "mins": 2723,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 34,
+        "fouls_won": 67,
+        "yellow_cards": 2,
+        "crosses": 52,
+        "offsides": 13,
+        "interceptions": 24
     },
     {
         "key": 168,
@@ -2765,7 +3863,13 @@
         "goals": 6,
         "assists": 4,
         "mins": 2125,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 47,
+        "fouls_won": 46,
+        "yellow_cards": 7,
+        "crosses": 59,
+        "offsides": 3,
+        "interceptions": 28
     },
     {
         "key": 189,
@@ -2781,7 +3885,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 743,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 5,
+        "fouls_won": 27,
+        "yellow_cards": 2,
+        "crosses": 6,
+        "offsides": 1,
+        "interceptions": 11
     },
     {
         "key": 266,
@@ -2797,7 +3907,13 @@
         "goals": 14,
         "assists": 2,
         "mins": 1983,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 36,
+        "fouls_won": 42,
+        "yellow_cards": 5,
+        "crosses": 14,
+        "offsides": 19,
+        "interceptions": 9
     },
     {
         "key": 70,
@@ -2813,7 +3929,13 @@
         "goals": 9,
         "assists": 3,
         "mins": 1671,
-        "penalties": 4
+        "penalties": 4,
+        "fouls_made": 14,
+        "fouls_won": 31,
+        "yellow_cards": 0,
+        "crosses": 46,
+        "offsides": 5,
+        "interceptions": 16
     },
     {
         "key": 198,
@@ -2829,7 +3951,13 @@
         "goals": 9,
         "assists": 6,
         "mins": 2699,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 69,
+        "fouls_won": 76,
+        "yellow_cards": 3,
+        "crosses": 30,
+        "offsides": 6,
+        "interceptions": 26
     },
     {
         "key": 59,
@@ -2845,7 +3973,13 @@
         "goals": 2,
         "assists": 10,
         "mins": 2704,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 24,
+        "fouls_won": 71,
+        "yellow_cards": 3,
+        "crosses": 42,
+        "offsides": 0,
+        "interceptions": 34
     },
     {
         "key": 112,
@@ -2861,7 +3995,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 2028,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 40,
+        "fouls_won": 22,
+        "yellow_cards": 6,
+        "crosses": 3,
+        "offsides": 0,
+        "interceptions": 33
     },
     {
         "key": 233,
@@ -2877,7 +4017,13 @@
         "goals": 2,
         "assists": 1,
         "mins": 1592,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 12,
+        "fouls_won": 12,
+        "yellow_cards": 2,
+        "crosses": 0,
+        "offsides": 1,
+        "interceptions": 67
     },
     {
         "key": 248,
@@ -2893,7 +4039,13 @@
         "goals": 12,
         "assists": 10,
         "mins": 2592,
-        "penalties": 7
+        "penalties": 7,
+        "fouls_made": 10,
+        "fouls_won": 48,
+        "yellow_cards": 3,
+        "crosses": 94,
+        "offsides": 3,
+        "interceptions": 14
     },
     {
         "key": 187,
@@ -2909,7 +4061,13 @@
         "goals": 3,
         "assists": 1,
         "mins": 885,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 2,
+        "fouls_won": 18,
+        "yellow_cards": 0,
+        "crosses": 5,
+        "offsides": 0,
+        "interceptions": 11
     },
     {
         "key": 208,
@@ -2925,7 +4083,13 @@
         "goals": 9,
         "assists": 3,
         "mins": 2289,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 54,
+        "fouls_won": 57,
+        "yellow_cards": 8,
+        "crosses": 63,
+        "offsides": 9,
+        "interceptions": 35
     },
     {
         "key": 163,
@@ -2941,7 +4105,13 @@
         "goals": 1,
         "assists": 3,
         "mins": 991,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 8,
+        "fouls_won": 17,
+        "yellow_cards": 3,
+        "crosses": 17,
+        "offsides": 0,
+        "interceptions": 25
     },
     {
         "key": 276,
@@ -2957,7 +4127,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 1596,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 43,
+        "fouls_won": 24,
+        "yellow_cards": 4,
+        "crosses": 7,
+        "offsides": 0,
+        "interceptions": 34
     },
     {
         "key": 133,
@@ -2973,7 +4149,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 2092,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 34,
+        "fouls_won": 16,
+        "yellow_cards": 10,
+        "crosses": 0,
+        "offsides": 1,
+        "interceptions": 35
     },
     {
         "key": 57,
@@ -2989,7 +4171,13 @@
         "goals": 1,
         "assists": 9,
         "mins": 1349,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 45,
+        "fouls_won": 39,
+        "yellow_cards": 7,
+        "crosses": 15,
+        "offsides": 0,
+        "interceptions": 19
     },
     {
         "key": 284,
@@ -3005,7 +4193,13 @@
         "goals": 3,
         "assists": 4,
         "mins": 1650,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 20,
+        "fouls_won": 28,
+        "yellow_cards": 3,
+        "crosses": 69,
+        "offsides": 4,
+        "interceptions": 16
     },
     {
         "key": 209,
@@ -3021,7 +4215,13 @@
         "goals": 6,
         "assists": 2,
         "mins": 1290,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 14,
+        "fouls_won": 35,
+        "yellow_cards": 2,
+        "crosses": 13,
+        "offsides": 4,
+        "interceptions": 11
     },
     {
         "key": 293,
@@ -3037,7 +4237,13 @@
         "goals": 0,
         "assists": 2,
         "mins": 2285,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 48,
+        "fouls_won": 30,
+        "yellow_cards": 5,
+        "crosses": 20,
+        "offsides": 4,
+        "interceptions": 32
     },
     {
         "key": 249,
@@ -3053,7 +4259,13 @@
         "goals": 4,
         "assists": 6,
         "mins": 2182,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 42,
+        "fouls_won": 45,
+        "yellow_cards": 5,
+        "crosses": 30,
+        "offsides": 0,
+        "interceptions": 26
     },
     {
         "key": 63,
@@ -3069,7 +4281,13 @@
         "goals": 2,
         "assists": 0,
         "mins": 801,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 12,
+        "fouls_won": 4,
+        "yellow_cards": 3,
+        "crosses": 0,
+        "offsides": 1,
+        "interceptions": 9
     },
     {
         "key": 102,
@@ -3085,23 +4303,13 @@
         "goals": 4,
         "assists": 2,
         "mins": 1235,
-        "penalties": 0
-    },
-    {
-        "key": 223,
-        "pos": "ST",
-        "nat": "ES",
-        "lig": "Spain Primera Division",
-        "tim": "RCD Espanyol de Barcelona",
-        "tim_url": "https://cdn.sofifa.net/teams/452/90.png",
-        "nam": "de tomas",
-        "nam_long": "raul de tomas gomez",
-        "img": "https://cdn.sofifa.net/players/210/315/22_180.png",
-        "lig_url": "LeagueIcons/ll.png",
-        "goals": 0,
-        "assists": 0,
-        "mins": 1,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 13,
+        "fouls_won": 21,
+        "yellow_cards": 2,
+        "crosses": 25,
+        "offsides": 14,
+        "interceptions": 12
     },
     {
         "key": 214,
@@ -3117,7 +4325,13 @@
         "goals": 2,
         "assists": 2,
         "mins": 891,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 9,
+        "yellow_cards": 2,
+        "crosses": 33,
+        "offsides": 7,
+        "interceptions": 2
     },
     {
         "key": 255,
@@ -3133,7 +4347,13 @@
         "goals": 2,
         "assists": 3,
         "mins": 1916,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 25,
+        "fouls_won": 28,
+        "yellow_cards": 4,
+        "crosses": 59,
+        "offsides": 1,
+        "interceptions": 42
     },
     {
         "key": 87,
@@ -3149,7 +4369,13 @@
         "goals": 9,
         "assists": 13,
         "mins": 2503,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 25,
+        "fouls_won": 50,
+        "yellow_cards": 2,
+        "crosses": 36,
+        "offsides": 10,
+        "interceptions": 24
     },
     {
         "key": 142,
@@ -3165,7 +4391,13 @@
         "goals": 1,
         "assists": 4,
         "mins": 3179,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 35,
+        "fouls_won": 21,
+        "yellow_cards": 8,
+        "crosses": 37,
+        "offsides": 0,
+        "interceptions": 95
     },
     {
         "key": 268,
@@ -3181,7 +4413,13 @@
         "goals": 10,
         "assists": 5,
         "mins": 2523,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 40,
+        "fouls_won": 83,
+        "yellow_cards": 9,
+        "crosses": 29,
+        "offsides": 20,
+        "interceptions": 21
     },
     {
         "key": 31,
@@ -3194,10 +4432,16 @@
         "nam_long": "andrew robertson",
         "img": "https://cdn.sofifa.net/players/216/267/22_180.png",
         "lig_url": "LeagueIcons/epl.png",
-        "goals": 1,
-        "assists": 0,
-        "mins": 2010,
-        "penalties": 0
+        "goals": 3,
+        "assists": 10,
+        "mins": 2537,
+        "penalties": 0,
+        "fouls_made": 21,
+        "fouls_won": 11,
+        "yellow_cards": 5,
+        "crosses": 89,
+        "offsides": 4,
+        "interceptions": 49
     },
     {
         "key": 28,
@@ -3213,23 +4457,13 @@
         "goals": 7,
         "assists": 2,
         "mins": 2884,
-        "penalties": 0
-    },
-    {
-        "key": 159,
-        "pos": "CM",
-        "nat": "AR",
-        "lig": "Spain Primera Division",
-        "tim": "Atl\u00e9tico de Madrid",
-        "tim_url": "https://cdn.sofifa.net/teams/240/90.png",
-        "nam": "r. de paul",
-        "nam_long": "rodrigo javier de paul",
-        "img": "https://cdn.sofifa.net/players/212/616/22_180.png",
-        "lig_url": "LeagueIcons/ll.png",
-        "goals": 7,
-        "assists": 2,
-        "mins": 2884,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 50,
+        "fouls_won": 37,
+        "yellow_cards": 5,
+        "crosses": 8,
+        "offsides": 0,
+        "interceptions": 40
     },
     {
         "key": 221,
@@ -3245,7 +4479,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 1409,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 18,
+        "fouls_won": 14,
+        "yellow_cards": 4,
+        "crosses": 1,
+        "offsides": 3,
+        "interceptions": 28
     },
     {
         "key": 201,
@@ -3261,7 +4501,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 1844,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 36,
+        "fouls_won": 17,
+        "yellow_cards": 8,
+        "crosses": 2,
+        "offsides": 2,
+        "interceptions": 57
     },
     {
         "key": 7,
@@ -3277,7 +4523,13 @@
         "goals": 18,
         "assists": 3,
         "mins": 2487,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 16,
+        "fouls_won": 27,
+        "yellow_cards": 9,
+        "crosses": 12,
+        "offsides": 35,
+        "interceptions": 6
     },
     {
         "key": 225,
@@ -3293,7 +4545,13 @@
         "goals": 3,
         "assists": 0,
         "mins": 2548,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 54,
+        "fouls_won": 19,
+        "yellow_cards": 7,
+        "crosses": 0,
+        "offsides": 0,
+        "interceptions": 66
     },
     {
         "key": 78,
@@ -3309,7 +4567,13 @@
         "goals": 3,
         "assists": 0,
         "mins": 3035,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 41,
+        "fouls_won": 16,
+        "yellow_cards": 9,
+        "crosses": 14,
+        "offsides": 0,
+        "interceptions": 43
     },
     {
         "key": 210,
@@ -3325,7 +4589,13 @@
         "goals": 7,
         "assists": 4,
         "mins": 2384,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 21,
+        "fouls_won": 24,
+        "yellow_cards": 2,
+        "crosses": 15,
+        "offsides": 1,
+        "interceptions": 43
     },
     {
         "key": 229,
@@ -3341,7 +4611,35 @@
         "goals": 1,
         "assists": 1,
         "mins": 954,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 18,
+        "fouls_won": 19,
+        "yellow_cards": 1,
+        "crosses": 15,
+        "offsides": 0,
+        "interceptions": 14
+    },
+    {
+        "key": 285,
+        "pos": "LM",
+        "nat": "FR",
+        "lig": "English Premier League",
+        "tim": "Newcastle United",
+        "tim_url": "https://cdn.sofifa.net/teams/13/90.png",
+        "nam": "a. saint-maximin",
+        "nam_long": "allan saint-maximin",
+        "img": "https://cdn.sofifa.net/players/216/388/22_180.png",
+        "lig_url": "LeagueIcons/epl.png",
+        "goals": 5,
+        "assists": 5,
+        "mins": 2804,
+        "penalties": 0,
+        "fouls_made": 24,
+        "fouls_won": 71,
+        "yellow_cards": 6,
+        "crosses": 69,
+        "offsides": 13,
+        "interceptions": 21
     },
     {
         "key": 3,
@@ -3357,7 +4655,13 @@
         "goals": 23,
         "assists": 13,
         "mins": 2762,
-        "penalties": 5
+        "penalties": 5,
+        "fouls_made": 13,
+        "fouls_won": 30,
+        "yellow_cards": 1,
+        "crosses": 51,
+        "offsides": 12,
+        "interceptions": 15
     },
     {
         "key": 67,
@@ -3373,7 +4677,13 @@
         "goals": 3,
         "assists": 3,
         "mins": 1900,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 7,
+        "fouls_won": 9,
+        "yellow_cards": 0,
+        "crosses": 32,
+        "offsides": 7,
+        "interceptions": 24
     },
     {
         "key": 242,
@@ -3389,7 +4699,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 1780,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 33,
+        "fouls_won": 36,
+        "yellow_cards": 3,
+        "crosses": 39,
+        "offsides": 1,
+        "interceptions": 35
     },
     {
         "key": 46,
@@ -3405,7 +4721,13 @@
         "goals": 7,
         "assists": 7,
         "mins": 1976,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 26,
+        "fouls_won": 32,
+        "yellow_cards": 3,
+        "crosses": 30,
+        "offsides": 7,
+        "interceptions": 24
     },
     {
         "key": 299,
@@ -3421,7 +4743,13 @@
         "goals": 8,
         "assists": 7,
         "mins": 2414,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 50,
+        "fouls_won": 92,
+        "yellow_cards": 9,
+        "crosses": 100,
+        "offsides": 2,
+        "interceptions": 50
     },
     {
         "key": 118,
@@ -3437,7 +4765,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 2440,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 34,
+        "fouls_won": 23,
+        "yellow_cards": 12,
+        "crosses": 2,
+        "offsides": 3,
+        "interceptions": 37
     },
     {
         "key": 197,
@@ -3453,7 +4787,13 @@
         "goals": 24,
         "assists": 3,
         "mins": 2076,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 15,
+        "fouls_won": 26,
+        "yellow_cards": 0,
+        "crosses": 3,
+        "offsides": 6,
+        "interceptions": 5
     },
     {
         "key": 271,
@@ -3469,7 +4809,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 2131,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 23,
+        "fouls_won": 24,
+        "yellow_cards": 1,
+        "crosses": 26,
+        "offsides": 4,
+        "interceptions": 43
     },
     {
         "key": 227,
@@ -3485,7 +4831,35 @@
         "goals": 0,
         "assists": 3,
         "mins": 1601,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 35,
+        "fouls_won": 18,
+        "yellow_cards": 8,
+        "crosses": 44,
+        "offsides": 2,
+        "interceptions": 15
+    },
+    {
+        "key": 148,
+        "pos": "ST",
+        "nat": "PT",
+        "lig": "German 1. Bundesliga",
+        "tim": "RB Leipzig",
+        "tim_url": "https://cdn.sofifa.net/teams/112172/90.png",
+        "nam": "andre silva",
+        "nam_long": "andre miguel valente da silva",
+        "img": "https://cdn.sofifa.net/players/228/941/22_180.png",
+        "lig_url": "LeagueIcons/bl.png",
+        "goals": 11,
+        "assists": 3,
+        "mins": 2076,
+        "penalties": 3,
+        "fouls_made": 26,
+        "fouls_won": 34,
+        "yellow_cards": 1,
+        "crosses": 14,
+        "offsides": 16,
+        "interceptions": 7
     },
     {
         "key": 47,
@@ -3501,7 +4875,13 @@
         "goals": 8,
         "assists": 4,
         "mins": 2857,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 36,
+        "fouls_won": 37,
+        "yellow_cards": 6,
+        "crosses": 65,
+        "offsides": 9,
+        "interceptions": 32
     },
     {
         "key": 93,
@@ -3517,7 +4897,35 @@
         "goals": 2,
         "assists": 4,
         "mins": 1720,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 28,
+        "fouls_won": 38,
+        "yellow_cards": 4,
+        "crosses": 24,
+        "offsides": 3,
+        "interceptions": 14
+    },
+    {
+        "key": 94,
+        "pos": "CB",
+        "nat": "BR",
+        "lig": "English Premier League",
+        "tim": "Chelsea",
+        "tim_url": "https://cdn.sofifa.net/teams/5/90.png",
+        "nam": "thiago silva",
+        "nam_long": "thiago emiliano da silva",
+        "img": "https://cdn.sofifa.net/players/164/240/22_180.png",
+        "lig_url": "LeagueIcons/epl.png",
+        "goals": 3,
+        "assists": 0,
+        "mins": 2650,
+        "penalties": 0,
+        "fouls_made": 13,
+        "fouls_won": 15,
+        "yellow_cards": 2,
+        "crosses": 1,
+        "offsides": 1,
+        "interceptions": 65
     },
     {
         "key": 45,
@@ -3533,23 +4941,35 @@
         "goals": 3,
         "assists": 0,
         "mins": 3150,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 46,
+        "fouls_won": 25,
+        "yellow_cards": 3,
+        "crosses": 2,
+        "offsides": 2,
+        "interceptions": 38
     },
     {
-        "key": 19,
-        "pos": "LW",
-        "nat": "XX",
-        "lig": "English Premier League",
-        "tim": "Tottenham Hotspur",
-        "tim_url": "https://cdn.sofifa.net/teams/18/90.png",
-        "nam": "h. son",
-        "nam_long": "heung min son",
-        "img": "https://cdn.sofifa.net/players/200/104/22_180.png",
-        "lig_url": "LeagueIcons/epl.png",
-        "goals": 1,
-        "assists": 0,
-        "mins": 1971,
-        "penalties": 0
+        "key": 262,
+        "pos": "CM",
+        "nat": "ES",
+        "lig": "Spain Primera Division",
+        "tim": "Valencia CF",
+        "tim_url": "https://cdn.sofifa.net/teams/461/90.png",
+        "nam": "carlos soler",
+        "nam_long": "carlos soler barragan",
+        "img": "https://cdn.sofifa.net/players/234/153/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 11,
+        "assists": 5,
+        "mins": 2474,
+        "penalties": 7,
+        "fouls_made": 31,
+        "fouls_won": 51,
+        "yellow_cards": 4,
+        "crosses": 49,
+        "offsides": 2,
+        "interceptions": 18
     },
     {
         "key": 194,
@@ -3565,7 +4985,13 @@
         "goals": 5,
         "assists": 1,
         "mins": 3062,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 49,
+        "fouls_won": 20,
+        "yellow_cards": 3,
+        "crosses": 13,
+        "offsides": 4,
+        "interceptions": 55
     },
     {
         "key": 170,
@@ -3581,7 +5007,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 127,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 1,
+        "fouls_won": 0,
+        "yellow_cards": 1,
+        "crosses": 4,
+        "offsides": 0,
+        "interceptions": 2
     },
     {
         "key": 36,
@@ -3597,7 +5029,13 @@
         "goals": 13,
         "assists": 5,
         "mins": 2128,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 27,
+        "fouls_won": 46,
+        "yellow_cards": 1,
+        "crosses": 52,
+        "offsides": 9,
+        "interceptions": 15
     },
     {
         "key": 169,
@@ -3613,7 +5051,13 @@
         "goals": 1,
         "assists": 0,
         "mins": 1119,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 3,
+        "fouls_won": 9,
+        "yellow_cards": 0,
+        "crosses": 1,
+        "offsides": 0,
+        "interceptions": 17
     },
     {
         "key": 42,
@@ -3629,7 +5073,13 @@
         "goals": 11,
         "assists": 2,
         "mins": 1835,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 23,
+        "fouls_won": 27,
+        "yellow_cards": 7,
+        "crosses": 9,
+        "offsides": 12,
+        "interceptions": 3
     },
     {
         "key": 160,
@@ -3645,7 +5095,13 @@
         "goals": 1,
         "assists": 2,
         "mins": 1837,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 11,
+        "fouls_won": 2,
+        "yellow_cards": 2,
+        "crosses": 7,
+        "offsides": 1,
+        "interceptions": 36
     },
     {
         "key": 257,
@@ -3661,7 +5117,13 @@
         "goals": 3,
         "assists": 2,
         "mins": 2929,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 54,
+        "fouls_won": 68,
+        "yellow_cards": 11,
+        "crosses": 24,
+        "offsides": 2,
+        "interceptions": 114
     },
     {
         "key": 290,
@@ -3677,7 +5139,13 @@
         "goals": 0,
         "assists": 4,
         "mins": 1660,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 26,
+        "fouls_won": 16,
+        "yellow_cards": 1,
+        "crosses": 63,
+        "offsides": 1,
+        "interceptions": 36
     },
     {
         "key": 109,
@@ -3693,7 +5161,13 @@
         "goals": 6,
         "assists": 4,
         "mins": 2631,
-        "penalties": 2
+        "penalties": 2,
+        "fouls_made": 53,
+        "fouls_won": 50,
+        "yellow_cards": 3,
+        "crosses": 24,
+        "offsides": 0,
+        "interceptions": 41
     },
     {
         "key": 273,
@@ -3709,7 +5183,35 @@
         "goals": 1,
         "assists": 3,
         "mins": 1915,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 7,
+        "fouls_won": 19,
+        "yellow_cards": 0,
+        "crosses": 72,
+        "offsides": 1,
+        "interceptions": 31
+    },
+    {
+        "key": 223,
+        "pos": "ST",
+        "nat": "ES",
+        "lig": "Spain Primera Division",
+        "tim": "RCD Espanyol de Barcelona",
+        "tim_url": "https://cdn.sofifa.net/teams/452/90.png",
+        "nam": "de tomas",
+        "nam_long": "raul de tomas gomez",
+        "img": "https://cdn.sofifa.net/players/210/315/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 17,
+        "assists": 3,
+        "mins": 2914,
+        "penalties": 5,
+        "fouls_made": 41,
+        "fouls_won": 64,
+        "yellow_cards": 7,
+        "crosses": 29,
+        "offsides": 31,
+        "interceptions": 9
     },
     {
         "key": 200,
@@ -3725,7 +5227,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 2718,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 22,
+        "fouls_won": 10,
+        "yellow_cards": 4,
+        "crosses": 1,
+        "offsides": 0,
+        "interceptions": 76
     },
     {
         "key": 258,
@@ -3741,7 +5249,13 @@
         "goals": 5,
         "assists": 2,
         "mins": 2600,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 54,
+        "fouls_won": 60,
+        "yellow_cards": 9,
+        "crosses": 36,
+        "offsides": 3,
+        "interceptions": 57
     },
     {
         "key": 191,
@@ -3757,7 +5271,35 @@
         "goals": 6,
         "assists": 5,
         "mins": 1715,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 14,
+        "fouls_won": 24,
+        "yellow_cards": 1,
+        "crosses": 18,
+        "offsides": 17,
+        "interceptions": 9
+    },
+    {
+        "key": 190,
+        "pos": "CB",
+        "nat": "ES",
+        "lig": "Spain Primera Division",
+        "tim": "Villarreal CF",
+        "tim_url": "https://cdn.sofifa.net/teams/483/90.png",
+        "nam": "pau torres",
+        "nam_long": "pau francisco torres",
+        "img": "https://cdn.sofifa.net/players/241/464/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 5,
+        "assists": 1,
+        "mins": 2855,
+        "penalties": 0,
+        "fouls_made": 19,
+        "fouls_won": 17,
+        "yellow_cards": 5,
+        "crosses": 2,
+        "offsides": 0,
+        "interceptions": 44
     },
     {
         "key": 125,
@@ -3773,7 +5315,13 @@
         "goals": 2,
         "assists": 0,
         "mins": 1405,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 21,
+        "fouls_won": 9,
+        "yellow_cards": 1,
+        "crosses": 38,
+        "offsides": 4,
+        "interceptions": 24
     },
     {
         "key": 206,
@@ -3789,7 +5337,13 @@
         "goals": 1,
         "assists": 6,
         "mins": 2211,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 33,
+        "fouls_won": 14,
+        "yellow_cards": 4,
+        "crosses": 4,
+        "offsides": 1,
+        "interceptions": 69
     },
     {
         "key": 141,
@@ -3805,7 +5359,13 @@
         "goals": 0,
         "assists": 1,
         "mins": 1833,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 22,
+        "fouls_won": 14,
+        "yellow_cards": 2,
+        "crosses": 25,
+        "offsides": 6,
+        "interceptions": 41
     },
     {
         "key": 54,
@@ -3821,7 +5381,13 @@
         "goals": 1,
         "assists": 1,
         "mins": 1831,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 7,
+        "fouls_won": 7,
+        "yellow_cards": 0,
+        "crosses": 0,
+        "offsides": 0,
+        "interceptions": 35
     },
     {
         "key": 49,
@@ -3837,7 +5403,35 @@
         "goals": 15,
         "assists": 2,
         "mins": 1806,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 14,
+        "fouls_won": 13,
+        "yellow_cards": 2,
+        "crosses": 17,
+        "offsides": 19,
+        "interceptions": 7
+    },
+    {
+        "key": 295,
+        "pos": "RB",
+        "nat": "ES",
+        "lig": "Spain Primera Division",
+        "tim": "Real Madrid CF",
+        "tim_url": "https://cdn.sofifa.net/teams/243/90.png",
+        "nam": "lucas vazquez",
+        "nam_long": "lucas vazquez iglesias",
+        "img": "https://cdn.sofifa.net/players/208/618/22_180.png",
+        "lig_url": "LeagueIcons/ll.png",
+        "goals": 3,
+        "assists": 0,
+        "mins": 1833,
+        "penalties": 0,
+        "fouls_made": 30,
+        "fouls_won": 38,
+        "yellow_cards": 3,
+        "crosses": 56,
+        "offsides": 5,
+        "interceptions": 29
     },
     {
         "key": 37,
@@ -3853,7 +5447,13 @@
         "goals": 2,
         "assists": 2,
         "mins": 1937,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 41,
+        "fouls_won": 55,
+        "yellow_cards": 12,
+        "crosses": 6,
+        "offsides": 1,
+        "interceptions": 25
     },
     {
         "key": 188,
@@ -3869,7 +5469,13 @@
         "goals": 24,
         "assists": 3,
         "mins": 2933,
-        "penalties": 5
+        "penalties": 5,
+        "fouls_made": 30,
+        "fouls_won": 76,
+        "yellow_cards": 4,
+        "crosses": 24,
+        "offsides": 31,
+        "interceptions": 6
     },
     {
         "key": 235,
@@ -3885,7 +5491,13 @@
         "goals": 9,
         "assists": 9,
         "mins": 2436,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 57,
+        "fouls_won": 32,
+        "yellow_cards": 10,
+        "crosses": 26,
+        "offsides": 17,
+        "interceptions": 9
     },
     {
         "key": 81,
@@ -3901,7 +5513,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 2410,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 21,
+        "fouls_won": 8,
+        "yellow_cards": 3,
+        "crosses": 0,
+        "offsides": 0,
+        "interceptions": 44
     },
     {
         "key": 86,
@@ -3917,7 +5535,13 @@
         "goals": 0,
         "assists": 2,
         "mins": 1755,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 7,
+        "fouls_won": 13,
+        "yellow_cards": 1,
+        "crosses": 28,
+        "offsides": 1,
+        "interceptions": 25
     },
     {
         "key": 204,
@@ -3933,7 +5557,13 @@
         "goals": 0,
         "assists": 0,
         "mins": 1793,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 19,
+        "fouls_won": 17,
+        "yellow_cards": 2,
+        "crosses": 22,
+        "offsides": 1,
+        "interceptions": 51
     },
     {
         "key": 278,
@@ -3949,7 +5579,13 @@
         "goals": 8,
         "assists": 4,
         "mins": 3003,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 50,
+        "fouls_won": 57,
+        "yellow_cards": 5,
+        "crosses": 10,
+        "offsides": 23,
+        "interceptions": 11
     },
     {
         "key": 161,
@@ -3965,7 +5601,13 @@
         "goals": 4,
         "assists": 1,
         "mins": 1283,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 13,
+        "fouls_won": 15,
+        "yellow_cards": 1,
+        "crosses": 28,
+        "offsides": 11,
+        "interceptions": 4
     },
     {
         "key": 184,
@@ -3981,7 +5623,13 @@
         "goals": 1,
         "assists": 3,
         "mins": 1653,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 8,
+        "fouls_won": 20,
+        "yellow_cards": 2,
+        "crosses": 1,
+        "offsides": 0,
+        "interceptions": 11
     },
     {
         "key": 286,
@@ -3997,7 +5645,13 @@
         "goals": 8,
         "assists": 5,
         "mins": 2777,
-        "penalties": 1
+        "penalties": 1,
+        "fouls_made": 28,
+        "fouls_won": 47,
+        "yellow_cards": 4,
+        "crosses": 56,
+        "offsides": 29,
+        "interceptions": 4
     },
     {
         "key": 186,
@@ -4013,7 +5667,13 @@
         "goals": 7,
         "assists": 10,
         "mins": 1851,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 17,
+        "fouls_won": 30,
+        "yellow_cards": 2,
+        "crosses": 30,
+        "offsides": 10,
+        "interceptions": 29
     },
     {
         "key": 238,
@@ -4029,7 +5689,13 @@
         "goals": 14,
         "assists": 1,
         "mins": 2760,
-        "penalties": 5
+        "penalties": 5,
+        "fouls_made": 41,
+        "fouls_won": 124,
+        "yellow_cards": 6,
+        "crosses": 49,
+        "offsides": 25,
+        "interceptions": 24
     },
     {
         "key": 270,
@@ -4045,7 +5711,13 @@
         "goals": 3,
         "assists": 2,
         "mins": 1992,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 36,
+        "fouls_won": 18,
+        "yellow_cards": 5,
+        "crosses": 9,
+        "offsides": 1,
+        "interceptions": 51
     },
     {
         "key": 111,
@@ -4061,7 +5733,13 @@
         "goals": 10,
         "assists": 4,
         "mins": 1722,
-        "penalties": 3
+        "penalties": 3,
+        "fouls_made": 32,
+        "fouls_won": 32,
+        "yellow_cards": 3,
+        "crosses": 33,
+        "offsides": 10,
+        "interceptions": 8
     },
     {
         "key": 222,
@@ -4077,7 +5755,13 @@
         "goals": 6,
         "assists": 5,
         "mins": 2086,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 19,
+        "fouls_won": 31,
+        "yellow_cards": 1,
+        "crosses": 20,
+        "offsides": 0,
+        "interceptions": 15
     },
     {
         "key": 164,
@@ -4093,6 +5777,34 @@
         "goals": 4,
         "assists": 3,
         "mins": 1319,
-        "penalties": 0
+        "penalties": 0,
+        "fouls_made": 30,
+        "fouls_won": 38,
+        "yellow_cards": 3,
+        "crosses": 65,
+        "offsides": 5,
+        "interceptions": 20
+    },
+    {
+        "key": 154,
+        "pos": "CAM",
+        "nat": "NO",
+        "lig": "English Premier League",
+        "tim": "Arsenal",
+        "tim_url": "https://cdn.sofifa.net/teams/1/90.png",
+        "nam": "m. odegaard",
+        "nam_long": "martin odegaard",
+        "img": "https://cdn.sofifa.net/players/222/665/22_180.png",
+        "lig_url": "LeagueIcons/epl.png",
+        "goals": 7,
+        "assists": 4,
+        "mins": 2785,
+        "penalties": 0,
+        "fouls_made": 32,
+        "fouls_won": 23,
+        "yellow_cards": 4,
+        "crosses": 26,
+        "offsides": 3,
+        "interceptions": 22
     }
 ]
