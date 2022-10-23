@@ -2,6 +2,9 @@
   color-scheme: dark;
 }
 
+[data-reactroot] 
+        {height: 100% !important; }
+
 @font-face {
   font-family: 'Roboto';
   src: url('Coolvetica.woff') format('woff');
@@ -12,6 +15,7 @@
 
 .outerHolder{
   display: flex;
+  margin-top: 5vh;
     width: 100%;  
     justify-content: space-evenly;
     align-content: stretch;
@@ -19,14 +23,15 @@
 
 html {
   /* background-color: #041C32; */
-  background-image: url("footdlebg.jpg");
-  background-position: top, bottom;
-    background-repeat: repeat-x, repeat-x;
+  /* background-image: url("footdlebg.jpg"); */
+  background-size: 100vw 100vh;
+  background: linear-gradient(black, #00182e);
+  background-attachment: fixed; /*edit*/
 }
 
 body{
   color: white;
-  font-family: 'Roboto';
+  font-family: 'Roboto';  
   font-size: min(4vh, 4vw);;
 }
 
@@ -44,9 +49,61 @@ body{
   width:100%;
 }
 
+.select_game_button {
+  border: 0;
+  border-radius: 0.25em;
+  /* background: initial; */
+  /* background-color: #7066e0; */
+  background-image: url("menubg.png");
+  height:11vh;
+  background-size: cover;
+  color: #fff;
+  font-size: 1em;
+  margin: 0.3125em;
+  padding: 0.625em 1.1em;
+  transition: box-shadow 0.1s;
+  box-shadow: 0 0 0 3px transparent;
+  font-weight: 500;
+  /* width:95%; */
+  height:auto;
+  width: auto;
+  font-family: 'Roboto';
+  background-position: center;
+  text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px;
+}
+.gridHolder{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.menuTable{
+  all:initial;
+  width:100%;
+}
+
+.menuButtonRow{
+  width:50%;
+}
+
+.kit_top_half {
+  display: flex;
+  flex-direction: row;
+}
+
 @media (max-width:550px)  { 
+
+  .kit_top_half {
+    flex-direction: column;
+  }
+
+  .select_game_button {
+    height:13vh;
+  }
   .outerHolder{
     display: flex;
+    margin-top: 0.5vh;
+
     width: 100%;
     justify-content: space-evenly;
     align-content: stretch;
@@ -66,4 +123,23 @@ body{
   div.cardHolderOuter{
     order:2;
   }
+
+  .gridHolder{
+    /* display: grid; */
+    
+    grid-template-columns: repeat(1, 1fr);
+  
+  }
+
+  .select_game_button{
+    width:auto;
+    height:10vh;
+  }
+}
+
+.guess_who_result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
 }

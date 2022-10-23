@@ -2,12 +2,12 @@ import logo from '../logo.svg';
 import './App.css';
 import players from '../answers_temp.json';
 import other_players from '../players_temp.json';
-import SearchBar from '../SearchBar/SearchBar';
-import CurrentPlayerViewer from '../CurrentPlayerView/CurrentPlayerViewer';
-import HigherLowerRenderer from '../HigherLowerRenderer/HigherLowerRenderer';
-import GuessMatrix from '../GuessMatrix/GuessMatrix';
+import SearchBar from '../Classic/SearchBar/SearchBar';
+import CurrentPlayerViewer from '../Classic/CurrentPlayerView/CurrentPlayerViewer';
+import HigherLowerRenderer from '../HigherLower/HigherLowerRenderer/HigherLowerRenderer';
+import GuessMatrix from '../Classic/GuessMatrix/GuessMatrix';
 import { useState, useEffect, useRef} from "react";
-import CardRenderer from '../CardRenderer/CardRenderer';
+import CardRenderer from '../Classic/CardRenderer/CardRenderer';
 import copy from 'copy-to-clipboard';
 import random from "random-seed"
 import {Helmet} from "react-helmet";

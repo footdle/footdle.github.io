@@ -35,11 +35,16 @@
        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3715104541981416"
        crossorigin="anonymous">
    </script>
+
+<script src='https://widgets.snack-projects.co.uk/gdpr/snack-cmp_v2.min.js' id='snack-cmp' async></script>
+
     <script>
       window.adsbygoogle = window.adsbygoogle || [];
       var adBreak = adConfig = function(o) {adsbygoogle.push(o);}
       adConfig({preloadAdBreaks: 'on'});
     </script>
+
+
 
   </head>
   <body>
@@ -56,5 +61,62 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
 
+    <script>
+    
+      if(top!=self){
+          document.write("This site is not authorised to display Footdle. To play footdle, please go to <a href='footdle.com'>footdle.com</a> :)");
+          document.location.href = "https://footdle.com";
+          stop()
+      }
+      </script>
+    <div id="snack_dex1"></div>
+    <!-- <div style="width: 728px; height: 90px; position:fixed; bottom:0; left: 20%; background:red"> </div> -->
+    <script>
+
+      (function(){
+      
+      var site_id = 2920;
+      
+      var data_site_id = 0;
+      
+      var sn_cb = new Date().getMonth();
+      
+      var snack_hb = document.createElement('script');
+      
+      snack_hb.src = 'https://cdn-header-bidding.snack-media.com/assets/js/snack-loader/'+site_id+'?cb='+sn_cb;
+      
+      snack_hb.id = 'snack_ads';
+      
+      if(data_site_id){
+      
+      snack_hb.setAttribute('data-site-id',data_site_id);
+      
+      }
+      
+      document.body.appendChild(snack_hb);
+      
+      snack_hb.onerror = function(){
+      
+      document.body.removeChild(snack_hb);
+      
+      var snack_hb2 = document.createElement('script');
+      
+      snack_hb2.src = 'https://cdn2-header-bidding.snack-media.com/assets/js/snack-loader/'+site_id+'?cb='+sn_cb;
+      
+      snack_hb2.id = 'snack_ads';
+      
+      if(data_site_id){
+      
+      snack_hb2.setAttribute('data-site-id',data_site_id);
+      
+      }
+      
+      document.body.appendChild(snack_hb2);
+      
+      };
+      
+      })();
+      
+      </script>
   </body>
 </html>

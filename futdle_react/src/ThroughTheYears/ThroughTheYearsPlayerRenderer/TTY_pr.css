@@ -1,0 +1,48 @@
+.tty_card_img{
+    /* width: 7vw; */
+    height: 3vw;
+}
+
+
+.tty_player_holder{
+    background: #e19e00;
+    margin: 6px;
+    text-align: center;
+    /* padding: 7px; */
+    border-radius: 5px;
+    font-size:large;
+    width:12vw;
+    flex-shrink: 0;
+}
+
+.tty_player_holder.golden{
+    background: #e19e00;
+}
+
+.tty_player_holder.bronze{
+    background: #B87333 ;
+}
+
+.tty_player_holder.silver{
+    background: rgb(97, 97, 97) ;
+}
+
+
+@media (max-width:550px)  { 
+
+    .tty_card_img{
+        /* width: 7vw; */
+        height: 7vw;
+    }
+
+    .tty_player_holder{
+        background: #e19e00;
+        margin: 6px;
+        text-align: center;
+        /* padding: 7px; */
+        border-radius: 5px;
+        font-size:large;
+        width:25vw;
+        flex-shrink: 0;
+    }
+}

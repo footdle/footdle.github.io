@@ -1,0 +1,44 @@
+.tty_guess_matrix_row {
+    background: #ffc107;
+    height: fit-content;
+    width: 30%;
+    margin: 1vh;
+    padding:5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.tty_guess_matrix{
+    max-height: 35vh;
+    display:flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+    align-items: center;
+    width:30vw;
+}
+
+@media (max-width:550px)  { 
+
+    .tty_guess_matrix{
+        max-height: 20vh;
+        display:flex;
+        flex-direction: row-reverse;
+        overflow-x: scroll;
+        width:80vw;
+        align-items: center;
+    }
+
+    .tty_guess_matrix_row {
+        width:20vw;
+        font-size: medium;
+        padding:1vw;
+    }
+    
+}
+
+.indicator{
+    color:black
+}

@@ -1,20 +1,26 @@
-import logo from '../logo.svg';
-import attackers from "../attackers_with_stats.json";
+// import logo from '../logo.svg';
+import attackers from "../HigherLower/attackers_with_stats.json";
+import kits17 from "../Kit/17_kit_info.json"
+import kits19 from "../Kit/19_kit_info.json"
+import kits20 from "../Kit/20_kit_info.json"
+import kits21 from "../Kit/21_kit_info.json"
+import kits22 from "../Kit/22_kit_info.json"
 
+import club_names from "../club_names.json"
 import './App.css';
-import players from '../answers_temp.json';
+import players from '../ThroughTheYears/pool.json';
 import icons from '../icons.json';
-import other_players from '../players_temp.json';
-import SearchBar from '../SearchBar/SearchBar';
-import IconSearchBar from '../IconSearchBar/IconSearchBar';
-import CurrentPlayerViewer from '../CurrentPlayerView/CurrentPlayerViewer';
-import HigherLowerRenderer from '../HigherLowerRenderer/HigherLowerRenderer';
-import IconCurrentPlayerViewer from '../IconCurrentPlayerView/IconCurrentPlayerViewer';
-import GuessMatrix from '../GuessMatrix/GuessMatrix';
-import IconCardGuessMatrix from '../IconCardGuessMatrix/IconCardGuessMatrix';
+import other_players from '../entire_list.json';
+import SearchBar from '../Classic/SearchBar/SearchBar';
+import IconSearchBar from '../Icon/IconSearchBar/IconSearchBar';
+import CurrentPlayerViewer from '../Classic/CurrentPlayerView/CurrentPlayerViewer';
+import HigherLowerRenderer from '../HigherLower/HigherLowerRenderer/HigherLowerRenderer';
+import IconCurrentPlayerViewer from '../Icon/IconCurrentPlayerView/IconCurrentPlayerViewer';
+import GuessMatrix from '../Classic/GuessMatrix/GuessMatrix';
+import IconCardGuessMatrix from '../Icon/IconCardGuessMatrix/IconCardGuessMatrix';
 import { useState, useEffect, useRef} from "react";
-import CardRenderer from '../CardRenderer/CardRenderer';
-import IconCardRenderer from '../IconCardRenderer/IconCardRenderer';
+import CardRenderer from '../Classic/CardRenderer/CardRenderer';
+import IconCardRenderer from '../Icon/IconCardRenderer/IconCardRenderer';
 import copy from 'copy-to-clipboard';
 import random from "random-seed"
 import {Helmet} from "react-helmet";
@@ -33,8 +39,19 @@ import Random from 'java-random'
 import { useAlert } from 'react-alert'
 
 import ReactGA from 'react-ga';
-import { jsonEval } from '@firebase/util';
+import GuessWhoRenderer from '../GuessWho/GuessWhoRenderer/GuessWhoRenderer';
+import GuessWhoSearchBar from '../GuessWho/GuessWhoSearchBar/GuessWhoSearchBar';
+import good_ones from '../GuessWho/guess_who_data/good_ones_2.json';
+import GuessWhoCurrentPlayerViewer from '../GuessWho/GuessWhoCurrentPlayerViewer/GuessWhoCurrentPlayerViewer';
+import GuessWhoPlayerRenderer from '../GuessWho/GuessWhoPlayerRenderer/GuessWhoPlayerRenderer';
+import KitClashRenderer from '../Kit/KitClashRenderer/KitClashRenderer';
+import KitSearchBar from '../Kit/KitSearchBar/KitSearchBar';
+import KitCurrentClubViewer from '../Kit/KitCurrentClubViewer/KitCurrentClubViewer';
+import KitGuesses from '../Kit/KitGuesses/KitGuesses';
 
+import ThroughTheYearsRenderer from "../ThroughTheYears/ThroughTheYearsRenderer/ThroughTheYearsRenderer";
+import pool from "../ThroughTheYears/pool.json";
+import ThroughTheYearsPlayerRenderer from "../ThroughTheYears/ThroughTheYearsPlayerRenderer/ThroughTheYearsPlayerRenderer";
 
 function IconApp() {
   const alert = useAlert()
@@ -97,7 +114,7 @@ function IconApp() {
   const [clearField, updateClearField] = useState(false)
   const [answer, setAnswer] = useState({})
   const [iconAnswer, setIconAnswer] = useState({})
-  const [currentGuess, setCurrentGuess] = useState({"pos":"??","lig":"??","lig_url":"??", "tim":"??","nat":"??","nam_long":"??", "nam":"??", "img": "https://cdn.sofifa.com/players/230/481/22_60.png", "tim_url":"??"})
+  const [currentGuess, setCurrentGuess] = useState({'overall': '??',  'short_name': '??',  'full_name': '??',  'position': '??',  'img_id': '230323',  'country': '??',  'country_code': '??',  'club_id': '??',  'club': '??',  'league': '??'})
   const [shareMatrix, setShareMatrix] = useState("")
   const [needsShare, setNeedsShare] = useState(false)
   const [gameActive, setGameActive] = useState(true)
@@ -110,38 +127,53 @@ function IconApp() {
   const [rightAttacker, setRightAttacker] = useState(false)
   const [statistic, setStatistic] = useState(false)
   const [currentStreak, setCurrentStreak] = useState(0)
-
+  const [currentGameIsGuessWho, setCurrentGameIsGuessWho] = useState(false)
+  const [guessWhoAnswer, setGuessWhoAnswer] = useState({'list_of_team_mates':[], 'player_info':{}})
+  const [selectedGuessWhoPlayer, setSelectedGuessWhoPlayer] = useState(undefined)
+  const [clearGuessWhoField, setClearGuessWhoField] = useState(false)
+  const [clearKitField, setClearKitField] = useState(false)
+  const [guessWhoGuessMatrix, setGuessWhoGuessMatrix] = useState([])
   const [genFunc, setGenFunc] = useState(-1)
-
-
   const componentRef = useRef({});
+  const [hintCount, setHintCount] = useState(0)
   const { current: my } = componentRef;
+  const [testStreak, setTestStreak] = useState("")
+  const [testMode, setTestMode] = useState(false)
+  const [currentGameModeIsTTY, setCurrentGameModeIsTTY] = useState(false)
 
   var gen_func = -1;
-
   const limit = 12
+  const hint_limit = 4;
+  const [kitClashAnswer, setKitClashAnswer] = useState({'kit_url':'__'})
+  const [ttyAnswer, setTTYAnswer] = useState([])
+  const [currentGameIsKitClash, setCurrentGameIsKitClash] = useState(false)
+  const [kitClashGuesses, setKitClashGuesses] = useState([])
+  
+  const [selectedKitClashPlayer, setSelectedKitClashPlayer] = useState(undefined)
 
   const resetGame = () => {
-
     updateGuesses([])
     setGameActive(true)
     setSelectedPlayer(undefined)
-    setCurrentGuess({"pos":"??","lig":"??","lig_url":"??", "tim":"??","nat":"??", "nam_long":"??", "nam":"??", "img": "https://cdn.sofifa.com/players/230/481/22_60.png", "tim_url":"??"})
+    setCurrentGuess({'overall': '??',  'short_name': '??',  'full_name': '??',  'position': '??',  'img_id': '230323',  'country': '??',  'country_code': '??',  'club_id': '??',  'club': '??',  'league': '??'})
     setCurrentGameIsDaily(false)
     setCurrentGameIsHigherLower(false)
     setCurrentGameIsIcon(false)
+    setCurrentGameIsHigherLower(false)
+    setGuessWhoAnswer({'list_of_team_mates':[], 'player_info':{}})
+    setGuessWhoGuessMatrix([])
+    setSelectedGuessWhoPlayer(undefined)
+    setCurrentGameIsGuessWho(false)
+    setCurrentGameModeIsTTY(false)
+    setHintCount(0)
+
     return
     console.log("resetting games")
     setGameActive(true)
 
     setSelectedPlayer(undefined)
     updateGuesses([])
-    setCurrentGuess({"pos":"??","lig":"??","lig_url":"??", "tim":"??","nat":"??", "nam_long":"??", "nam":"??", "img": "https://cdn.sofifa.com/players/230/481/22_60.png", "tim_url":"??"})
-
-    // let l = Math.floor(Math.random() * players.length);
-    // setAnswer(players[l])
-    // console.log(players[l])
-
+    setCurrentGuess({'overall': '??',  'short_name': '??',  'full_name': '??',  'position': '??',  'img_id': '230323',  'country': '??',  'country_code': '??',  'club_id': '??',  'club': '??',  'league': '??'})
   }
   
   useEffect(() =>{
@@ -158,7 +190,6 @@ function IconApp() {
         return false
       }
     }
-    
     return true
   }
 
@@ -179,6 +210,7 @@ function IconApp() {
       if(currentGameIsIcon){
         MySwal.fire({
           title: <p>You lose -- Icon.</p>,
+          position:'top',
           html: <div style={{    display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'}}>
@@ -217,6 +249,7 @@ function IconApp() {
       }else
         MySwal.fire({
           title: <p>You lose.</p>,
+          position:'top',
           html: <div style={{    display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'}}>
@@ -292,6 +325,7 @@ function IconApp() {
         setGameActive(false)
         MySwal.fire({
           title: <p>Correct Guess! {currentGameIsDaily}</p>,
+          position:'top',
           html: <div style={{    display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'}}>
@@ -333,6 +367,7 @@ function IconApp() {
         setGameActive(false)
         MySwal.fire({
           title: <p>Correct Guess -- Icon! {currentGameIsDaily}</p>,
+          position:'top',
           html: <div style={{    display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'}}>
@@ -373,43 +408,47 @@ function IconApp() {
       }
       
     }
-    // if(needsShare){
-    //   let s = shareText(true)
-    //   navigator.clipboard.writeText(s)
-    //   setNeedsShare(false)
-
-    //   MySwal.fire({
-    //     toast:true,
-    //     timer:3000,
-    //     text:"Copied result to Clipboard!"      
-    //   })
-    // }
 
   }, [guesses])
 
   let startGame = () => {
-    let policyAgree = localStorage.getItem('policyAgree')
-    if(policyAgree === null) showPrivacyDialog()
 
-    MySwal.fire({
-      showCancelButton: true,
-      confirmButtonText:"Ok!",
-      allowEscapeKey:false,
-      title:"Added Higher/Lower Mode!",
-      html:  <>
-      <div style={{overflowY:'auto', fontSize:'small',  fontWeight:50}}>
-        <p>Added a Higher/Lower Mode!</p>
-        <p>Now you will see a single advertisment. Thanks for the patience</p>
-        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
-      </div>
-      </>,
-      showCancelButton: false,
-      allowOutsideClick: false,
-      
-    }).then((value)=>{
+    let shouldShowUpdate = true
+    if(true || localStorage.getItem('ipw_update') === null){
+      localStorage.setItem('ipw_update', "set")
+      console.log("didnt show")
+      MySwal.fire({
+        showCancelButton: true,
+        confirmButtonText:"Ok!",
+        allowEscapeKey:false,
+        title:"New Game Mode!!",
+        position:'top',
+        html:  <>
+        <div style={{overflowY:'auto', fontSize:'small',  fontWeight:50}}>
+          <p>Through The Years</p>
+          <p>Added a new game mode called Through The Years, where you try to guess the player from their old Fifa Cards</p>
+          <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+        </div>
+        </>,
+        showCancelButton: false,
+        allowOutsideClick: false,
+        
+      }).then((value)=>{
+        showAd()
+        showMenu()
+      })
+
+    }else{
+      console.log("Alreadt showed upw")
       showAd()
       showMenu()
-    })
+    }
+
+
+    // let policyAgree = localStorage.getItem('policyAgree')
+    // if(policyAgree === null) showPrivacyDialog()
+
+    
 
   }
 
@@ -459,6 +498,7 @@ function IconApp() {
       denyButtonColor:"#484848",
       showDenyButton:true,
       allowEscapeKey:false,
+      position:'top',
       html:  <>
           <PerfectScrollbar>
           <div style={{fontSize:'small', height:'50vh', fontWeight:50, fontSize:'large'}}>
@@ -466,7 +506,7 @@ function IconApp() {
         <p>Note: Scroll if entire tutorial is not visible :)</p>
         <p> You will be asked which player has obtained the most goals, scored the most penalties, played the most minutes, or assisted the most in league games this season, between two players. You must select which player has the most of the seleted statistic. An example is shown below between Messi and Ronaldo's <strong>league goals</strong> from the 21/22 season : </p>
         <div>
-          <HigherLowerRenderer leftAttacker={temp_left} rightAttacker={temp_right} statistic={'goals'} lost={true}></HigherLowerRenderer>
+          <HigherLowerRenderer leftAttacker={temp_left} rightAttacker={temp_right} statistic={'goals'} lost={true} smallMode={true}></HigherLowerRenderer>
 
         </div>
         <p>
@@ -534,12 +574,13 @@ let checkHigherLower = (selectedAttacker, oppositeAttacker, statistic)  => {
     setGameActive(false)
     MySwal.fire({
       title: <p>You lose!</p>,
+      position:'top',
       html: <div style={{    display: 'flex',
         flexDirection: 'column',
         alignItems: 'center'}}>
           <>
             Your streak was {currentStreak}
-            <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower} lost={true}/>
+            <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower} lost={true} smallMode={true}/>
           </>
 
         </div>,
@@ -652,6 +693,7 @@ let startHigherLowerGame = function(){
       cancelButtonText:"Back to Main Menu",
       cancelButtonColor:'darkred',
       allowEscapeKey:false,
+      position:'top',
       html:  <>
           <PerfectScrollbar>
           <div style={{fontSize:'small', height:'50vh', fontWeight:50,  fontSize:'large'}}>
@@ -709,24 +751,36 @@ let startHigherLowerGame = function(){
 
 let showMenu = () => {
   MySwal.fire({
-    showCancelButton: true,
-    showConfirmButton: true,
+    showCancelButton: false,
+    showConfirmButton: false,
     confirmButtonColor:'#a77e05',
     confirmButtonText:"Footdle",
     denyButtonText: "Footdle Icons",
     cancelButtonColor:"darkgreen",
     cancelButtonText:"Footdle Higher/Lower",
     denyButtonColor:"#343f81",
-    
-    showDenyButton:true,
-    title:"Select which game to play!",
+    showConfirmButton:false,
+    position:'top',
+    showDenyButton:false,
+    title:"Games Menu",
     allowEscapeKey:false,
+    position:'top',
     html:  <>
         <PerfectScrollbar>
         {/* <div style={{fontSize:'small', height:'50vh', fontWeight:50}}> */}
-          Choose which version of the game you want to play.
-        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+          {/* Choose which version of the game you want to play.
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p> */}
 
+        <div className="gridHolder">
+                <input type = "Button" style={{backgroundImage:'url("menu/classic.png")'}}className={"select_game_button"} onClick={showClassicMenu} defaultValue="Footdle"/> 
+                <input type = "Button" style={{backgroundImage:'url("menu/icons.png")'}} className={"select_game_button"} onClick={showIconMenu} defaultValue="Icons"/> 
+                <input type = "Button" style={{backgroundImage:'url("menu/higherLower.png")'}} className={"select_game_button"} onClick={showHigherLowerMenu} defaultValue="Higher/Lower"/>
+                <input type = "Button"  style={{backgroundImage:'url("menu/ipw.png")'}}  className={"select_game_button"} onClick={showGuessWhoMenu} defaultValue="I Played With"/>
+                <input type = "Button"  style={{backgroundImage:'url("menu/tty.png")'}}  className={"select_game_button"} onClick={showThroughTheYearsMenu} defaultValue="Through the Years "/>
+                {/* <input type = "Button"  style={{backgroundImage:'url("menu/kit.png")'}}  className={"select_game_button"} onClick={showKitClashMenu} defaultValue="Kit Clash"/> */}
+          
+        </div>
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p> 
         {/* </div> */}
         </PerfectScrollbar>
     
@@ -736,7 +790,8 @@ let showMenu = () => {
   }).then((value)=>{
     // console.log(value)
     if(value.isConfirmed){
-      showClassicMenu()
+      // showClassicMenu()
+      showGuessWhoMenu()
     } else if(value.isDenied){
       showIconMenu()
     } else if(value.isDismissed){
@@ -745,42 +800,217 @@ let showMenu = () => {
   })
 }
 
+  let showGuessWhoMenu = () => {
+    MySwal.fire({
+      showCancelButton: true,
+      showDenyButton:true,
+      confirmButtonText:"Daily Challenge",
+      denyButtonText:"Random Challenge",
+      cancelButtonText:"Back to Main Menu",
+      allowEscapeKey:false,
+      // title:"I Played With",
+      position:'top',
+      html:  <>
+      <div style={{overflowY:'auto', fontSize:'medium',  maxHeight:"50vh", fontWeight:50}}>
+        <p>In this game mode, you will be given 4 or more seemingly unrelated players. However, there is a single player who has played with all of them at some point in their career. You must guess who that player is based on the hints the game will give you. The answer can be any player from the last 15 years that has played at atleast 4 different clubs during this period.</p>
+        <p><strong>NOTE: This game is only about player that played together at club level, not national team level.</strong></p>
+        <p>The game will give the following hints:</p>
+        <ul>
+          <li>The club he played with them at.</li>
+          <li>The player's nationality and position</li>
+        </ul>
+        <p>For each guess you make, the game will also let you know if the guess played with the answer at any point in their career!</p>
+        <p> You can press "Give Hint" to move on to the next clue, however this will cost you 1 attempt.</p>
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+      </div>
+      </>,
+      showConfirmButton: true,
+      allowOutsideClick: false,
+      
+    }).then((value)=>{
+      // console.log(value)
+      if(value.isConfirmed){
+        setGameActive(true)
+        setCurrentGameIsGuessWho(true)
+        startGuessWhoGame(true)
+        setCurrentGameIsDaily(true)
+
+      }else if(value.isDenied){
+        setGameActive(true)
+        setCurrentGameIsGuessWho(true)
+        startGuessWhoGame(false)
+        setCurrentGameIsDaily(false)
+      }else if(value.isDismissed){
+        showMenu()
+      }
+
+     
+    })
+  }
+
+  let showKitClashMenu = () => {
+    MySwal.fire({
+      showCancelButton: true,
+      showDenyButton:true,
+      confirmButtonText:"Daily Challenge",
+      denyButtonText:"Random Challenge",
+      cancelButtonText:"Back to Main Menu",
+      allowEscapeKey:false,
+      // title:"I Played With",
+      position:'top',
+      html:  <>
+      <div style={{overflowY:'auto', fontSize:'medium',  maxHeight:"50vh", fontWeight:50}}>
+        <p>Kit Clash</p>
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+      </div>
+      </>,
+      showConfirmButton: true,
+      allowOutsideClick: false,
+      
+    }).then((value)=>{
+      // console.log(value)
+      if(value.isConfirmed){
+        setGameActive(true)
+        setCurrentGameIsKitClash(true)
+        startKitClash(true)
+        setCurrentGameIsDaily(true)
+
+      }else if(value.isDenied){
+        setGameActive(true)
+        setCurrentGameIsKitClash(true)
+        startKitClash(false)
+        setCurrentGameIsDaily(false)
+      }else if(value.isDismissed){
+        showMenu()
+      }
+
+     
+    })
+  }
+
+  
+  let showThroughTheYearsMenu = () => {
+    MySwal.fire({
+      showCancelButton: true,
+      showDenyButton:true,
+      confirmButtonText:"Daily Challenge",
+      denyButtonText:"Random Challenge",
+      cancelButtonText:"Back to Main Menu",
+      allowEscapeKey:false,
+      position:'top',
+      html:  <>
+      <div style={{overflowY:'auto', fontSize:'medium',  maxHeight:"50vh", fontWeight:50}}>
+        <p>Through The Years</p>
+
+        <span>
+          In this game mode, you will be shown the different FIFA cards of players from across different years, without being told who the player is. You will only be given the rating and position the player had in that particular year.
+        </span>
+
+        <span>
+          You can get hints by pressing the 'Give Hint' button, which will give you the following hints in order:
+          <ul>
+            <li>
+              Last club they played for
+            </li>
+
+            <li>
+              All the clubs they played for
+            </li>
+
+            <li>
+              Nationality
+            </li>
+          </ul>
+
+          You have 7 attempts! Good luck :)
+        </span>
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+      </div>
+      </>,
+      showConfirmButton: true,
+      allowOutsideClick: false,
+      
+    }).then((value)=>{
+      // console.log(value)
+      if(value.isConfirmed){
+        setGameActive(true)
+        setCurrentGameModeIsTTY(true)
+        startTTY(true)
+        setCurrentGameIsDaily(true)
+
+        toast.info('Drag the cards horizontally to reveal all of them!', {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+
+      }else if(value.isDenied){
+        setGameActive(true)
+        setCurrentGameModeIsTTY(true)
+        startTTY(false)
+        setCurrentGameIsDaily(false)
+
+        toast.info('Drag the cards horizontally to reveal all of them!', {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+        });
+      }else if(value.isDismissed){
+        showMenu()
+      }
+
+     
+    })
+  }
+
+
   let showClassicMenu = () => {
-      let tutorial_guesses = [{'img': "https://cdn.sofifa.net/players/210/413/22_120.png",
-      'key': "210413",
-      'lig': "Italian Serie A",
-      'lig_flg': "https://cdn.sofifa.net/flags/it.png",
-      'lig_url': 'LeagueIcons/sa.png',
-      'nam': "a. romagnoli",
-      'nat': "IT",
-      'pos': "CB",
-      'tim': "AC Milan",
-      'tim_url': "https://cdn.sofifa.net/teams/47/60.png"},
+      let tutorial_guesses = [{
+        "overall": "81",
+        "short_name": "A. Romagnoli",
+        "full_name": "Alessio Romagnoli",
+        "position": "CB",
+        "img_id": "210413",
+        "country": "Italy",
+        "country_code": "it",
+        "club_id": "47",
+        "club": "AC Milan",
+        "league": "LeagueIcons/sa.png"
+    },
     
-      {
-        "key": "216393",
-        "pos": "CM",
-        "nat": "BE",
-        'lig_url':'LeagueIcons/epl.png',
-        "lig": "English Premier League",
-        "tim": "Leicester City",
-        "tim_url": "https://cdn.sofifa.net/teams/95/60.png",
-        "nam": "y. tielemans",
-        "img": "https://cdn.sofifa.net/players/216/393/22_120.png",
-        "lig_flg": "https://cdn.sofifa.net/flags/gb-eng.png"
-    }]
+    {
+      "overall": "86",
+      "short_name": "Y. Tielemans",
+      "full_name": "Youri Tielemans",
+      "position": "CM",
+      "img_id": "216393",
+      "country": "Belgium",
+      "country_code": "be",
+      "club_id": "95",
+      "club": "Leicester City",
+      "league": "LeagueIcons/epl.png"
+  }]
 
     let tutorial_answer = {
-      "key": "192985",
-      "pos": "CM",
-      "nat": "BE",
-      "lig": "English Premier League",
-      "tim": "Manchester City",
-      "tim_url": "https://cdn.sofifa.net/teams/10/60.png",
-      "nam": "k. de bruyne",
-      "img": "https://cdn.sofifa.net/players/192/985/22_120.png",
-      "lig_flg": "https://cdn.sofifa.net/flags/gb-eng.png"
-    }
+      "overall": "92",
+      "short_name": "K. De Bruyne",
+      "full_name": "Kevin De Bruyne",
+      "position": "CM",
+      "img_id": "192985",
+      "country": "Belgium",
+      "country_code": "be",
+      "club_id": "10",
+      "club": "Manchester City",
+      "league": "LeagueIcons/epl.png"
+  }
 
     let shouldShowToday = true
     if(localStorage.getItem('streakData') !== null){
@@ -804,12 +1034,13 @@ let showMenu = () => {
       showCancelButton:true,
       showDenyButton:true,
       allowEscapeKey:false,
+      position:'top',
       html:  <>
           <PerfectScrollbar>
-          <div style={{fontSize:'small', height:'50vh', fontWeight:50,  fontSize:'large'}}>
+          <div style={{fontSize:'small', height:'40vh', fontWeight:50,  fontSize:'large'}}>
       <p> <a href="https://donate.unhcr.org/int/en/ukraine-emergency?gclid=Cj0KCQiA95aRBhCsARIsAC2xvfxJfXIVIYbjYglyykGKYkjFsfetU7UqG44ysm5Yh4L2baQZZ77Sc1kaAk6oEALw_wcB&gclsrc=aw.ds" > Kindly consider donating to Ukrainians in need </a></p>
         <p>Note: Scroll if entire tutorial is not visible :)</p>
-        <p>A random player has been chosen from the top 300 rated players from the Top 5 Leagues on Fifa 22. The aim is to guess which player it is within {limit} attempts, by using players themselves as guesses.</p>
+        <p>A random player has been chosen from the top rated players from the Top 5 Leagues on Fifa 23. The aim is to guess which player it is within {limit} attempts, by using players themselves as guesses.</p>
         <hr></hr>
         <p>Consider the case where our guess is Romagnoli. In this case, since all the fields are red, we know that the player is not a center back, he does not play in Seria A, and he is not Italian.</p>
         <div className='holder'>
@@ -826,6 +1057,7 @@ let showMenu = () => {
           </PerfectScrollbar>
       
       </>,
+      position:'top',
       allowOutsideClick: false,
       
     }).then((value)=>{
@@ -854,8 +1086,6 @@ let showMenu = () => {
         // console.log(players[l])
 
         setAnswer(players[l])
-
-        
       }
 
       // if(value.isConfirmed || value.isDenied){
@@ -1002,6 +1232,103 @@ let showMenu = () => {
 
   }, [])
 
+
+  let startGuessWhoGame = (today) => {
+
+    if(today){
+      ReactGA.event({
+        category: 'guesswho_daily',
+        action: 'Started guess who daily game'
+      });
+      console.log("A")
+    }else{
+      ReactGA.event({
+        category: 'guesswho_random',
+        action: 'Started guess who random game'
+      });
+      console.log("B")
+    }
+    let random_gen_func = today ? getTodayRandom : Math.random
+    let guess_answer = good_ones[ Math.floor(random_gen_func()*good_ones.length)]
+    setGuessWhoAnswer(guess_answer)
+  }
+
+  let startKitClash = (today) => {
+
+    if(today){
+      ReactGA.event({
+        category: 'guesswho_daily',
+        action: 'Started guess who daily game'
+      });
+      console.log("A")
+    }else{
+      ReactGA.event({
+        category: 'guesswho_random',
+        action: 'Started guess who random game'
+      });
+      console.log("B")
+    }
+    let random_gen_func = today ? getTodayRandom : Math.random
+    let kits = kits17.concat(kits19, kits20, kits21, kits22)
+    console.log(kits[0])
+    let guess_answer = kits[ Math.floor(random_gen_func()*kits.length)]
+    console.log(guess_answer)
+    setKitClashAnswer(guess_answer)
+  }
+
+  const tty_game_end = (guesses, hint_count, won) => {
+    MySwal.fire({
+      title: won ? "You win!" : "You Lose!",
+      position:'top',
+      html: <div>
+        <PerfectScrollbar>
+          <div className="guess_who_result">
+          The answer was:
+          {/* get the last guess from guesses */}
+          <img style={{width:"min(25vh, 40vw)", height:"min(25vh, 40vw)"}}src={"https://footdle.com/images/big/players/"+Object.values(ttyAnswer)[0]['player_id']+".png"}/>
+          <p>{Object.values(ttyAnswer)[0]['name']}</p>
+
+          {currentGameIsDaily ? <button onClick={() => {shareTTYResult(guesses, hint_count, won)}}>Share Result ✉️</button> : ''}
+          </div>
+        </PerfectScrollbar>
+      </div>,
+      confirmButtonText: "Back to Main Menu!",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      allowEnterKey: false,
+      showConfirmButton: true,
+      showCloseButton: false,
+      showCancelButton: false,
+    }).then((result) => {
+
+      if (result.isConfirmed) {
+        resetGame()
+        showMenu()
+      }
+    })
+  }
+
+  let startTTY = (today) => {
+
+    if(today){
+      ReactGA.event({
+        category: 'tty-daily',
+        action: 'Started through the years daily game'
+      });
+      console.log("A")
+    }else{
+      ReactGA.event({
+        category: 'tty-random',
+        action: 'Started through the years random game'
+      });
+      console.log("B")
+    }
+    let random_gen_func = today ? getTodayRandom : Math.random
+    let guess_answer = pool[ Math.floor(random_gen_func()*pool.length)]
+    console.log("set the answer to", guess_answer)
+    setTTYAnswer(guess_answer)
+  }
+
   const generateIconText = () => {
     const playerNTs = ['54', '52', '54', '18', '23', '34', '54', '54', '27', '40', '35', '34', '54', '54', '14', '27', '27', '45', '45', '38', '18', '34', '21', '18', '14', '45', '38', '21', '27', '52', '9', '45', '14', '50', '14', '52', '45', '27', '34', '27', '83', '34', '34', '34', '27', '54', '42', '103', '13', '34', '18', '54', '12', '18', '21', '54', '27', '108', '12', '21', '50', '45', '13', '14', '34', '14', '18', '14', '18', '18', '14', '21', '49', '34', '45', '54', '39', '38', '14', '27', '52', '45', '46', '52', '117', '27', '18', '18', '133', '17', '51', '38', '83', '14', '34', '27', '25', '10', '14', '14', '14', '27', '14', '163']
 
@@ -1031,10 +1358,10 @@ let showMenu = () => {
 
     for (let i = 0; i < guesses.length; i ++){
       let player = guesses[i]
-      let pos_ind = player.pos == answer.pos ? '🟩' : '🟥'
-      let lig_ind = player.lig == answer.lig ? '🟩': '🟥'
-      let nat_ind = player.nat == answer.nat ? '🟩' : '🟥'
-      let tim_ind = player.tim == answer.tim  ? '🟩' : '🟥'
+      let pos_ind = player.position == answer.position ? '🟩' : '🟥'
+      let lig_ind = player.league == answer.league ? '🟩': '🟥'
+      let nat_ind = player.country_code == answer.country_code ? '🟩' : '🟥'
+      let tim_ind = player.club == answer.club  ? '🟩' : '🟥'
 
       st += pos_ind + lig_ind + nat_ind + tim_ind
 
@@ -1071,6 +1398,129 @@ let showMenu = () => {
     return st
   }
 
+  const shareGuessWhoResult = (managed) =>{
+
+      let st = "Footdle - I Played With " +dayOfYear()+"\n" + 
+      (managed ? " I got it in: " + (guessWhoGuessMatrix.length+1) + " attempts ✅, used " + hintCount + (hintCount == 1 ? " hint" : " hints.")
+      : "I didn't get it after " + (guessWhoGuessMatrix.length+1) + " attempts ❌, used " + hintCount + (hintCount == 1 ? " hint" : " hints."))
+
+      copy(st)
+      toast.info('Copied result to the clipboard!', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+      });
+  }
+
+  const shareTTYResult = (guesses, hintCount, won) =>{
+    let st = "Footdle - Through The Years " +dayOfYear()+"\n" +
+    (won ? " I got it in: " + (guesses.length+1) + " attempts ✅, used " + hintCount + (hintCount == 1 ? " hint" : " hints.")
+      : "I didn't get it after " + (guesses.length+1) + " attempts ❌, used " + hintCount + (hintCount == 1 ? " hint" : " hints."))
+
+    copy(st)
+    toast.info('Copied result to the clipboard!', {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+    return st
+  }
+
+  const makeGuessWhoGuess = (player) => {
+    if(player != "empty_guess" && guessWhoAnswer['player_info']['player_id'] == selectedGuessWhoPlayer['player_id']){
+      // Swal saying you win
+      MySwal.fire({
+        title: "You win!",
+        position:'top',
+        html: <div>
+          <PerfectScrollbar>
+            <div className="guess_who_result">
+            You guessed the correct player!
+            <GuessWhoPlayerRenderer player={[player['player_id'], 0]} show_club={false} hidden={false}/>
+            {currentGameIsDaily ? <button onClick={() => {shareGuessWhoResult(true)}}>Share Result</button> : ''}
+            </div>
+          </PerfectScrollbar>
+        </div>,
+        confirmButtonText: "Back to Main Menu!",
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        allowEnterKey: false,
+        showConfirmButton: true,
+        showCloseButton: false,
+        showCancelButton: false,
+      }).then((result) => {
+
+        if (result.isConfirmed) {
+          resetGame()
+          showMenu()
+        }
+      })
+    }else{
+      if(guessWhoGuessMatrix.length >= 8-1){
+        MySwal.fire({
+          title: "You Lose!",
+          position:'top',
+          html: <div>
+            <PerfectScrollbar>
+              <div className="guess_who_result">
+              The answer was:
+              <GuessWhoPlayerRenderer player={[guessWhoAnswer['player_info']['player_id'], 0]} show_club={false} hidden={false}/>
+              {currentGameIsDaily ? <button onClick={() => {shareGuessWhoResult(false)}}>Share Result ✉️</button> : ''}
+              </div>
+            </PerfectScrollbar>
+          </div>,
+          confirmButtonText: "Back to Main Menu!",
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+          allowEnterKey: false,
+          showConfirmButton: true,
+          showCloseButton: false,
+          showCancelButton: false,
+        }).then((result) => {
+  
+          if (result.isConfirmed) {
+            resetGame()
+            showMenu()
+          }
+        })
+      }
+    }
+    
+    setGuessWhoGuessMatrix([...guessWhoGuessMatrix, player])
+    setClearGuessWhoField(true)
+    setSelectedGuessWhoPlayer(undefined)
+  }
+
+  const makeEmptyGuessWhoGuess = () => {
+    makeGuessWhoGuess("empty_guess")
+    setHintCount(hintCount+1)
+  }
+
+  const makeKitClashGuess = (guess, year) => {
+    setKitClashGuesses([...kitClashGuesses, [guess, year]])
+    // first 2 letters of guess['kit_url']
+    console.log(guess[1] ,  kitClashAnswer['year'] , guess[0] , kitClashAnswer['club'])
+
+    if(guess ==  kitClashAnswer['club']  && year == kitClashAnswer['year']){
+      // Show swal saying you wan
+      MySwal.fire({
+        title: "You win!",
+        position:'top'
+      })
+    }
+    setClearKitField(true)
+    setSelectedKitClashPlayer(undefined)
+  }
+
+  const guessCount = () => guessWhoGuessMatrix.length
 
   const makeGuess = (guess) => {
 
@@ -1086,14 +1536,12 @@ let showMenu = () => {
   
   return (
     <>
-      <center><h1>Footdle {currentGameIsIcon ? ' - Icons' : ''}</h1></center>
-      
       {
         currentGameIsHigherLower ?
         <div style ={{display:'flex', flexDirection:'column', alignItems:'center'}}>
         Current streak: {currentStreak} <br></br>
 
-        <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower} lost={!gameActive}/>
+        <HigherLowerRenderer leftAttacker={leftAttacker} rightAttacker={rightAttacker} statistic={statistic} selectedFunction={checkHigherLower} lost={!gameActive} smallMode={false}/>
         <ToastContainer 
           theme="dark" 
           position="middle-center"
@@ -1111,8 +1559,85 @@ let showMenu = () => {
       : ''
       }
 
+{
+        currentGameIsKitClash ?
+        <div style ={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+          <p>Kit Clash</p>
+          <div className="kit_top_half">
+            <div>
+              <KitSearchBar names = {club_names} answer={kitClashAnswer} setSelectedClub={setSelectedKitClashPlayer} clearField={clearKitField} updateClearField={setClearKitField}/>
+              <KitCurrentClubViewer selectedPlayer={selectedKitClashPlayer} onclick={undefined} submitPlayer={makeKitClashGuess} setPlayerMatches={undefined} ></KitCurrentClubViewer>
+            </div>
+            <KitClashRenderer answer={kitClashAnswer} guessCount={kitClashGuesses.length}></KitClashRenderer>
+          </div>
+          <KitGuesses guesses={kitClashGuesses} answer={kitClashAnswer}/>
+
+        <ToastContainer 
+          theme="dark" 
+          position="middle-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          style={{ width: "100%" }}
+        />
+      </div>
+      : ''
+      }
+
+      {
+        currentGameIsGuessWho ?
+        <div style ={{display:'flex', flexDirection:'column', alignItems:'center', maxHeight:'75vh', overflowY:'scroll'}}>
+        <GuessWhoSearchBar clearField={clearGuessWhoField} updateClearField={setClearGuessWhoField} gameActive={true} selectPlayerFunction={setSelectedGuessWhoPlayer} setSelectedPlayer={setSelectedGuessWhoPlayer} giveClueFunction={makeEmptyGuessWhoGuess} hintCount={hintCount} guessCount={guessCount}></GuessWhoSearchBar>
+        <GuessWhoCurrentPlayerViewer selectedPlayer={selectedGuessWhoPlayer} onclick={undefined} submitPlayer={makeGuessWhoGuess} setPlayerMatches={undefined}/>
+        <GuessWhoRenderer guess_answer={guessWhoAnswer} guess_count={guessCount} hint_count={hintCount} guess_matrix={guessWhoGuessMatrix}></GuessWhoRenderer>
+        
+        <ToastContainer 
+          theme="dark" 
+          position="middle-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          style={{ width: "100%" }}
+        />
+        
+      </div>
+      : ''
+      }
+
+      {
+        currentGameModeIsTTY ?
+        <div style ={{display:'flex', flexDirection:'column', alignItems:'center', maxHeight:'75vh', overflowY:'scroll'}}>
+        <ThroughTheYearsRenderer answer={ttyAnswer} won={tty_game_end} toast_f={toast}/>
+        <ToastContainer 
+          theme="dark" 
+          position="middle-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          style={{ width: "100%" }}
+        />
+        
+      </div>
+      : ''
+      }
+
       {( () =>{
-          if(currentGameIsHigherLower){
+          if(currentGameIsHigherLower || currentGameIsGuessWho || currentGameIsKitClash || currentGameModeIsTTY){
           }else{
             return <>
             <div className='outerHolder'>
@@ -1123,9 +1648,16 @@ let showMenu = () => {
               </div>
               <div className='holder'>
                 {currentGameIsIcon == true ?
-                  <IconSearchBar players={icons} selectPlayerFunction={setSelectedPlayer} clearField={clearField} updateClearField={updateClearField} gameActive={gameActive} setSelectedPlayer={setSelectedPlayer}/>
-                    :
+                <>
+                <center><span>Footdle Icons</span></center>
+                <IconSearchBar players={icons} selectPlayerFunction={setSelectedPlayer} clearField={clearField} updateClearField={updateClearField} gameActive={gameActive} setSelectedPlayer={setSelectedPlayer}/>
+                </>
+                  
+                    : <>
+                      
+                      <center><span>Footdle</span></center>
                       <SearchBar players={other_players} selectPlayerFunction={setSelectedPlayer} clearField={clearField} updateClearField={updateClearField} gameActive={gameActive} setSelectedPlayer={setSelectedPlayer}/>
+                    </>
                     }
 
                     {currentGameIsIcon == true ?
@@ -1133,6 +1665,7 @@ let showMenu = () => {
                     :
                       <CurrentPlayerViewer selectedPlayer = {selectedPlayer} submitPlayer={makeGuess} onclick={undefined} setPlayerMatches={undefined}/>
                     }
+
                     <ToastContainer 
                       theme="dark" 
                       position="middle-center"
@@ -1140,6 +1673,7 @@ let showMenu = () => {
                       hideProgressBar={false}
                       newestOnTop={false}
                       closeOnClick
+                      limit={1}
                       rtl={false}
                       pauseOnFocusLoss
                       draggable
@@ -1151,15 +1685,6 @@ let showMenu = () => {
             </>
           }
       })()}
-
-      
-
-          
-
-      
-
-
-
     </>
   )
 }
