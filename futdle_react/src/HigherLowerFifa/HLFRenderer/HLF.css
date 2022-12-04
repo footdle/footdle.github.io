@@ -1,0 +1,19 @@
+.player_name { 
+    color:red
+}
+
+.highlighted{
+    background-color: #634300;
+}
+
+.hlf_thign{
+    width:50%;
+}
+
+
+@media (max-width:550px)  { 
+    
+    .hlf_thign{
+        width:100%;
+    }
+}

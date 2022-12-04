@@ -17,12 +17,14 @@ export default function CurrentPlayerViewer ({selectedPlayer, submitPlayer, oncl
         {selectedPlayer != null ? 
         
         <div 
+        
         onClick={(e) =>{
             if(onclick != undefined){
                 onclick(selectedPlayer)
                 setPlayerMatches([])
             }
         }}
+
         className={`current_row ${submitPlayer != undefined ? 'need_bg' : ""}`}> 
             <div className="currentPlayerView">
                 <span className="iteminrow"> {selectedPlayer['position']} </span>

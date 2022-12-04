@@ -29,6 +29,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 
+import hlf_pool from '../HigherLowerFifa/hlf_pool.json';
+
 import '@sweetalert2/theme-dark/dark.css'
 import withReactContent from 'sweetalert2-react-content'
 import PerfectScrollbar from 'react-perfect-scrollbar'
@@ -51,7 +53,9 @@ import KitGuesses from '../Kit/KitGuesses/KitGuesses';
 
 import ThroughTheYearsRenderer from "../ThroughTheYears/ThroughTheYearsRenderer/ThroughTheYearsRenderer";
 import pool from "../ThroughTheYears/pool.json";
+import classic_pool from "../answer_pool.json";
 import ThroughTheYearsPlayerRenderer from "../ThroughTheYears/ThroughTheYearsPlayerRenderer/ThroughTheYearsPlayerRenderer";
+import HigherLowerFifaRenderer from "../HigherLowerFifa/HLFRenderer/HLFRenderer";
 
 function IconApp() {
   const alert = useAlert()
@@ -140,12 +144,15 @@ function IconApp() {
   const [testStreak, setTestStreak] = useState("")
   const [testMode, setTestMode] = useState(false)
   const [currentGameModeIsTTY, setCurrentGameModeIsTTY] = useState(false)
+  const [currentGameModeIsHLF, setCurrentGameModeIsHLF] = useState(false)
+
 
   var gen_func = -1;
   const limit = 12
   const hint_limit = 4;
   const [kitClashAnswer, setKitClashAnswer] = useState({'kit_url':'__'})
   const [ttyAnswer, setTTYAnswer] = useState([])
+  const [hlfAnswer, setHLFAnswer] = useState([])
   const [currentGameIsKitClash, setCurrentGameIsKitClash] = useState(false)
   const [kitClashGuesses, setKitClashGuesses] = useState([])
   
@@ -165,6 +172,7 @@ function IconApp() {
     setSelectedGuessWhoPlayer(undefined)
     setCurrentGameIsGuessWho(false)
     setCurrentGameModeIsTTY(false)
+    setCurrentGameModeIsHLF(false)
     setHintCount(0)
 
     return
@@ -537,7 +545,7 @@ function IconApp() {
           action: 'Started higher/lower daily random game'
         });
 
-        window.gen_random =rng.doubles()
+        window.gen_random = rng.doubles()
         setGameActive(true)
         startHigherLowerGame()
         setCurrentGameIsDaily(true)
@@ -776,8 +784,8 @@ let showMenu = () => {
                 <input type = "Button" style={{backgroundImage:'url("menu/icons.png")'}} className={"select_game_button"} onClick={showIconMenu} defaultValue="Icons"/> 
                 <input type = "Button" style={{backgroundImage:'url("menu/higherLower.png")'}} className={"select_game_button"} onClick={showHigherLowerMenu} defaultValue="Higher/Lower"/>
                 <input type = "Button"  style={{backgroundImage:'url("menu/ipw.png")'}}  className={"select_game_button"} onClick={showGuessWhoMenu} defaultValue="I Played With"/>
-                <input type = "Button"  style={{backgroundImage:'url("menu/tty.png")'}}  className={"select_game_button"} onClick={showThroughTheYearsMenu} defaultValue="Through the Years "/>
-                {/* <input type = "Button"  style={{backgroundImage:'url("menu/kit.png")'}}  className={"select_game_button"} onClick={showKitClashMenu} defaultValue="Kit Clash"/> */}
+                <button style={{backgroundImage:'url("menu/tty.png")'}}  className={"select_game_button"} onClick={showThroughTheYearsMenu}>Through the Years</button>
+                <input type = "Button"  style={{backgroundImage:'url("menu/kit.png")'}}  className={"select_game_button"} onClick={showHLFMenu} defaultValue="StatsBomb"/>
           
         </div>
         <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p> 
@@ -971,6 +979,52 @@ let showMenu = () => {
     })
   }
 
+  let showHLFMenu = () => {
+    MySwal.fire({
+      showCancelButton: true,
+      showDenyButton:true,
+      confirmButtonText:"Daily Challenge",
+      denyButtonText:"Random Challenge",
+      cancelButtonText:"Back to Main Menu",
+      allowEscapeKey:false,
+      position:'top',
+      html:  <>
+      <div style={{overflowY:'auto', fontSize:'medium',  maxHeight:"50vh", fontWeight:50}}>
+        <p>HLF</p>
+
+        <span>
+          HIGHER LOWER FIFA STATS hehe
+          </span>
+        <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
+      </div>
+      </>,
+      showConfirmButton: true,
+      allowOutsideClick: false,
+      
+    }).then((value)=>{
+      // console.log(value)
+      if(value.isConfirmed){
+        setGameActive(true)
+        setCurrentGameModeIsHLF(true)
+        startHLF(true)
+        setCurrentGameIsDaily(true)
+
+
+      }else if(value.isDenied){
+        setGameActive(true)
+        setCurrentGameModeIsHLF(true)
+        startHLF(false)
+        setCurrentGameIsDaily(false)
+
+      }else if(value.isDismissed){
+        showMenu()
+      }
+
+     
+    })
+  }
+
+  
 
   let showClassicMenu = () => {
       let tutorial_guesses = [{
@@ -1082,10 +1136,10 @@ let showMenu = () => {
           });
         }
 
-        let l = Math.floor(random_gen_func() * players.length);
-        // console.log(players[l])
+        let l = Math.floor(random_gen_func() * classic_pool.length);
+        // console.log(classic_pool[l])
 
-        setAnswer(players[l])
+        setAnswer(classic_pool[l])
       }
 
       // if(value.isConfirmed || value.isDenied){
@@ -1327,6 +1381,27 @@ let showMenu = () => {
     let guess_answer = pool[ Math.floor(random_gen_func()*pool.length)]
     console.log("set the answer to", guess_answer)
     setTTYAnswer(guess_answer)
+  }
+
+  let startHLF = (today) => {
+
+    if(today){
+      ReactGA.event({
+        category: 'hlf-daily',
+        action: 'Started higher lower daily game'
+      });
+      console.log("A")
+    }else{
+      ReactGA.event({
+        category: 'hlf-random',
+        action: 'Started higher lower random fifa game'
+      });
+      console.log("B")
+    }
+    let random_gen_func = today ? getTodayRandom : Math.random
+    let guess_answer = hlf_pool[ Math.floor(random_gen_func()*hlf_pool.length)]
+    console.log("set the answer to", guess_answer)
+    setHLFAnswer(guess_answer)
   }
 
   const generateIconText = () => {
@@ -1636,8 +1711,30 @@ let showMenu = () => {
       : ''
       }
 
+      {
+        currentGameModeIsHLF ?
+        <div style ={{display:'flex', flexDirection:'column', alignItems:'center', maxHeight:'75vh', overflowY:'scroll'}}>
+        <HigherLowerFifaRenderer currentGameIsDaily={currentGameIsDaily} dailySeed={getTodayRandom} showMenu={showMenu}/>
+        <ToastContainer 
+          theme="dark" 
+          position="middle-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover={false}
+          style={{ width: "100%" }}
+        />
+        
+      </div>
+      : ''
+      }
+
       {( () =>{
-          if(currentGameIsHigherLower || currentGameIsGuessWho || currentGameIsKitClash || currentGameModeIsTTY){
+          if(currentGameIsHigherLower || currentGameIsGuessWho || currentGameIsKitClash || currentGameModeIsTTY || currentGameModeIsHLF){
           }else{
             return <>
             <div className='outerHolder'>

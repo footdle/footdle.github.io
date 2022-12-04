@@ -1,0 +1,164 @@
+.cardHolderHLF {
+    height:57vh;
+    aspect-ratio: 9/13;
+    background-image: url('cardbg_gold.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: small;
+    filter: drop-shadow(0px 0px 5px white) brightness(1);
+    transition: all 1s ease;
+}
+
+.cardHolderHLF.smallMode{
+    width:30vh;
+    aspect-ratio: 9/13;
+    background-image: url('cardbg_gold.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-start;
+    align-content: stretch;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: small;
+    filter: drop-shadow(0px 0px 5px white) brightness(1);
+    transition: all 1s ease;
+}
+
+table.smallMode {
+    font-size:min(2vw, 2vh);
+
+}
+
+.cardHolderHLF.darken {
+    filter:drop-shadow(0px 0px 5px white) brightness(0.5);
+}
+
+.indicatorHLF.hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: min(5vh,5vw);
+    z-index: 100;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.indicatorHLF.showing{
+    position: absolute;
+    top: 0;
+    font-size: min(5vh,5vw);
+    left: 0;
+    z-index: 100;
+    opacity: 1;
+}
+
+
+.cardHolderOuter{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftSideHLF{
+    width:47%;
+    color:black;
+    margin-top: 4vh;
+    margin-left:0;
+    margin-bottom: 2vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+}
+
+.midSide{
+    width:100%;
+    color:black;
+    position:absolute; 
+    text-align: center;
+    bottom:-2.3vh;
+    font-size: 1.8vh;
+    flex-direction: column;
+    left:-2%;
+    justify-content: space-evenly;
+    align-items: center;
+    text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+}
+
+.rightSideHLF {
+    display:flex;
+    color:black;
+    text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+    flex-direction: column;
+    width:80%;
+    justify-content: space-evenly;
+    align-items: center;
+    font-weight: bolder;
+}
+
+.cardPicHLF {
+    right: 16%;
+    top: 5%;
+    position: fixed;
+    height: 72%;    
+}
+
+.playerFaceHLF {
+    height:80%;
+}
+
+.nameButtonHLF{
+    font-family: Roboto;
+    border-radius: 10px;
+    border: none;
+    background: #854f01;
+    font-size:min(4vh,3vw);
+}
+
+.topSideHLF {
+    display: flex;
+    flex-direction: column;
+    height: 50.5%;
+    width: 90%;
+    position: relative;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+}
+
+.botSideHLF{
+    text-transform: capitalize;
+    text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97998px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.5136px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+    color: black;
+    font-size:3vh
+}
+
+.tableHLF {
+    font-size: min(1.8vw, 3vh);
+}
+
+@media (max-width:550px)  { 
+    
+    .tableHLF{
+        font-size:min(3vw, 3vh);
+    } 
+
+    .nameButtonHLF{
+        width:45%;
+    }
+
+    .cardHolderHLF {
+        width:50%;
+        height: unset;
+    }
+}
