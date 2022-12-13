@@ -37,14 +37,14 @@ export default function HLFCardRenderer ({index, hidden, hideMode, loaded, setLo
                         className={"playerFaceHLF"} src={"https://footdle.com/images/player_imgs/"+player['id']+".png"}
                         onLoad={() => {
                             setLoaded(true)
-                            console.log('LOADED!!!!!!')
+                            //console.log('LOADED!!!!!!')
                         }}
                     />
                 </div>
 
                 <div className="botSideHLF" style={{width:"100%", marginTop:"0em", height:"31%",  display:'flex',justifyContent: 'center',
                                                         flexDirection: "column", alignItems: 'center' }}>
-                    <table class={'tableHLF '+ (smallMode?'smallMode':'')} style={{marginTop:0}}>
+                    <table className={'tableHLF '+ (smallMode?'smallMode':'')} style={{marginTop:0}}>
                         <tr>
                             <td className={hidden == 'pace' ? "highlighted":""}>
                                 {  (hideMode==0) && hidden == 'pace' ? "??" : player.pace} PAC

@@ -11,8 +11,27 @@
     align-items: center;
     position: relative;
     font-size: small;
-    filter: drop-shadow(0px 0px 5px white) brightness(1);
-    transition: all 1s ease;
+    filter:  brightness(100%);
+    /* filter: drop-shadow(0px 0px 5px white) brightness(100%); */
+    -webkit-filter: -webkit-brightness(100%);
+    /* -webkit-filter: -webkit-drop-shadow(0px 0px 5px white) -webkit-brightness(100%); */
+    -moz-filter: drop-shadow(0px 0px 5px white) brightness(100%);
+    -o-filter: drop-shadow(0px 0px 5px white) brightness(100%);
+
+    transition: filter 0.5s ease-in-out;
+    -webkit-transition: -webkit-filter 0.5s ease-in-out;
+    -moz-transition: -moz-filter 0.5s ease;
+    -o-transition: -o-filter  0.5s ease;
+}
+
+
+.cardHolderHLF.darken {
+    filter: brightness(50%);
+    /* filter:drop-shadow(0px 0px 5px white) brightness(50%); */
+    -webkit-filter: -webkit-brightness(50%);
+    /* -webkit-filter: -webkit-drop-shadow(0px 0px 5px white) -webkit-brightness(50%); */
+    -moz-filter: -moz-drop-shadow(0px 0px 5px white) -moz-brightness(50%);
+    -o-filter: -o-drop-shadow(0px 0px 5px white) -o-brightness(50%);
 }
 
 .cardHolderHLF.smallMode{
@@ -28,18 +47,14 @@
     align-items: center;
     position: relative;
     font-size: small;
-    filter: drop-shadow(0px 0px 5px white) brightness(1);
-    transition: all 1s ease;
+
+    filter: drop-shadow(0px 0px 5px white) brightness(100%);
 }
 
 table.smallMode {
     font-size:min(2vw, 2vh);
-
 }
 
-.cardHolderHLF.darken {
-    filter:drop-shadow(0px 0px 5px white) brightness(0.5);
-}
 
 .indicatorHLF.hidden {
     position: absolute;
@@ -47,8 +62,13 @@ table.smallMode {
     left: 0;
     font-size: min(5vh,5vw);
     z-index: 100;
+    -webkit-opacity: 0;
     opacity: 0;
-    transition: all 0.5s ease;
+    
+    transition:opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition:opacity 0.5s ease;
+    -o-transition:opacity 0.5s ease;
 }
 
 .indicatorHLF.showing{
@@ -58,6 +78,7 @@ table.smallMode {
     left: 0;
     z-index: 100;
     opacity: 1;
+    -webkit-opacity: 1;
 }
 
 
@@ -121,6 +142,7 @@ table.smallMode {
     font-family: Roboto;
     border-radius: 10px;
     border: none;
+    color:white;
     background: #854f01;
     font-size:min(4vh,3vw);
 }
@@ -155,6 +177,8 @@ table.smallMode {
 
     .nameButtonHLF{
         width:45%;
+        padding:5px;
+        font-size: min(4vh, 4vw);
     }
 
     .cardHolderHLF {

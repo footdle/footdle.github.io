@@ -56,6 +56,7 @@ import pool from "../ThroughTheYears/pool.json";
 import classic_pool from "../answer_pool.json";
 import ThroughTheYearsPlayerRenderer from "../ThroughTheYears/ThroughTheYearsPlayerRenderer/ThroughTheYearsPlayerRenderer";
 import HigherLowerFifaRenderer from "../HigherLowerFifa/HLFRenderer/HLFRenderer";
+import HLFCardRenderer from "../HigherLowerFifa/HLFCardRenderer/HLFCardRenderer"; 
 
 function IconApp() {
   const alert = useAlert()
@@ -430,11 +431,12 @@ function IconApp() {
         confirmButtonText:"Ok!",
         allowEscapeKey:false,
         title:"New Game Mode!!",
+        height:'65vh',
         position:'top',
         html:  <>
-        <div style={{overflowY:'auto', fontSize:'small',  fontWeight:50}}>
-          <p>Through The Years</p>
-          <p>Added a new game mode called Through The Years, where you try to guess the player from their old Fifa Cards</p>
+        <div style={{height:'100%', overflowY:'auto', fontSize:'small',  fontWeight:50}}>
+          <p>Higher Lower FUT & Bug Fixes</p>
+          <p>Added a new game mode called Higher or Lower FUT. Also fixed a bug that caused the old Higher Lower Daily game to have the same answers each day</p>
           <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
         </div>
         </>,
@@ -538,7 +540,7 @@ function IconApp() {
         setCurrentGameIsHigherLower(true)
 
         let today_seed = dayOfYear() + (new Date().getFullYear())
-        rng.setSeed(today_seed)
+        rng.setSeed(today_seed*1000)
 
         ReactGA.event({
           category: 'hl_daily',
@@ -785,7 +787,7 @@ let showMenu = () => {
                 <input type = "Button" style={{backgroundImage:'url("menu/higherLower.png")'}} className={"select_game_button"} onClick={showHigherLowerMenu} defaultValue="Higher/Lower"/>
                 <input type = "Button"  style={{backgroundImage:'url("menu/ipw.png")'}}  className={"select_game_button"} onClick={showGuessWhoMenu} defaultValue="I Played With"/>
                 <button style={{backgroundImage:'url("menu/tty.png")'}}  className={"select_game_button"} onClick={showThroughTheYearsMenu}>Through the Years</button>
-                <input type = "Button"  style={{backgroundImage:'url("menu/kit.png")'}}  className={"select_game_button"} onClick={showHLFMenu} defaultValue="StatsBomb"/>
+                <button style={{backgroundImage:'url("menu/hlf.png")'}}  className={"select_game_button"} onClick={showHLFMenu} >Higher/Lower FUT </button>
           
         </div>
         <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p> 
@@ -988,13 +990,20 @@ let showMenu = () => {
       cancelButtonText:"Back to Main Menu",
       allowEscapeKey:false,
       position:'top',
+      width:'90vw',
       html:  <>
       <div style={{overflowY:'auto', fontSize:'medium',  maxHeight:"50vh", fontWeight:50}}>
-        <p>HLF</p>
+        <p>Higher or Lower FUT Stats</p>
 
         <span>
-          HIGHER LOWER FIFA STATS hehe
-          </span>
+          In this game mode, you will be shown two Fifa 23 FUT cards, and one of the attributes will be randomly covered.
+          <div style={{width:"100%", display:'flex', flexDirection:'row', justifyContent:'center'}}>
+              <HLFCardRenderer index={0} loaded={true} hidden={'pace'} setLoaded={(function () {})} hideMode={0} smallMode={false}/>
+              <HLFCardRenderer index={1} loaded={true} hidden={'pace'} setLoaded={(function () {})} hideMode={0} smallMode={false}/>
+          </div>
+
+          You will have to guess which player has the highest value in that particular attribute. The goal is to get the longest streak possible without losing! Good luck :)
+        </span>
         <p> By  <a href="mailto:michael.pulis@outlook.com" target="_blank">Michael Pulis</a></p>
       </div>
       </>,
@@ -1008,6 +1017,10 @@ let showMenu = () => {
         setCurrentGameModeIsHLF(true)
         startHLF(true)
         setCurrentGameIsDaily(true)
+        ReactGA.event({
+          category: 'HLFUT_daily',
+          action: 'Started higher_lower_fut daily game'
+        });
 
 
       }else if(value.isDenied){
@@ -1015,6 +1028,10 @@ let showMenu = () => {
         setCurrentGameModeIsHLF(true)
         startHLF(false)
         setCurrentGameIsDaily(false)
+        ReactGA.event({
+          category: 'HLFUT_random',
+          action: 'Started higher_lower_fut random game'
+        });
 
       }else if(value.isDismissed){
         showMenu()
@@ -1714,7 +1731,7 @@ let showMenu = () => {
       {
         currentGameModeIsHLF ?
         <div style ={{display:'flex', flexDirection:'column', alignItems:'center', maxHeight:'75vh', overflowY:'scroll'}}>
-        <HigherLowerFifaRenderer currentGameIsDaily={currentGameIsDaily} dailySeed={getTodayRandom} showMenu={showMenu}/>
+        <HigherLowerFifaRenderer currentGameIsDaily={currentGameIsDaily} dailySeed={getTodayRandom} showMenu={showMenu} resetGame={resetGame}/>
         <ToastContainer 
           theme="dark" 
           position="middle-center"
